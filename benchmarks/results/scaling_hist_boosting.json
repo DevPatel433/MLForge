@@ -1,0 +1,30 @@
+{
+  "iterations": 20,
+  "features": 20,
+  "rows": [
+    {
+      "n_train": 2000,
+      "exact_seconds": 0.77,
+      "hist_seconds": 0.33,
+      "speedup": 2.3,
+      "exact_r2": 0.7197,
+      "hist_r2": 0.7465
+    },
+    {
+      "n_train": 8000,
+      "exact_seconds": 3.35,
+      "hist_seconds": 0.53,
+      "speedup": 6.3,
+      "exact_r2": 0.7322,
+      "hist_r2": 0.7506
+    },
+    {
+      "n_train": 32000,
+      "exact_seconds": 13.31,
+      "hist_seconds": 1.06,
+      "speedup": 12.6,
+      "exact_r2": 0.7357,
+      "hist_r2": 0.756
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "model": "mlp",
+  "dataset": "MNIST (60,000 train / 10,000 test)",
+  "n_train": 60000,
+  "n_test": 10000,
+  "parameters": 109386,
+  "optimizer": "adam",
+  "learning_rate": 0.002,
+  "batch_size": 64,
+  "epochs": 8,
+  "seed": 0,
+  "final_test_accuracy": 0.9782,
+  "total_training_seconds": 16.8,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.24761019922285588,
+      "train_acc_running": 0.9248,
+      "test_loss": 0.11838159130586716,
+      "test_acc": 0.9626,
+      "epoch_seconds": 2.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.11734249932238058,
+      "train_acc_running": 0.9643166666666667,
+      "test_loss": 0.10616884288506569,
+      "test_acc": 0.9651,
+      "epoch_seconds": 2.0
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.08925458863950707,
+      "train_acc_running": 0.9715833333333334,
+      "test_loss": 0.0883923460462404,
+      "test_acc": 0.9725,
+      "epoch_seconds": 2.2
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.07319782100568875,
+      "train_acc_running": 0.9765,
+      "test_loss": 0.07872016358959552,
+      "test_acc": 0.977,
+      "epoch_seconds": 2.1
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.06251770683331372,
+      "train_acc_running": 0.9792333333333333,
+      "test_loss": 0.0857878034637132,
+      "test_acc": 0.973,
+      "epoch_seconds": 2.2
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.05456993669608829,
+      "train_acc_running": 0.9820666666666666,
+      "test_loss": 0.07877060046859546,
+      "test_acc": 0.9765,
+      "epoch_seconds": 2.0
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.049999852427980315,
+      "train_acc_running": 0.9839,
+      "test_loss": 0.08822672788159845,
+      "test_acc": 0.9752,
+      "epoch_seconds": 2.2
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.0467037266148109,
+      "train_acc_running": 0.9848,
+      "test_loss": 0.07341539489738794,
+      "test_acc": 0.9782,
+      "epoch_seconds": 2.2
+    }
+  ],
+  "environment": {
+    "mlforge": "0.3.0",
+    "numpy": "2.4.4",
+    "python": "3.12.3",
+    "machine": "x86_64",
+    "cpu_threads_available": 1
+  }
+}
