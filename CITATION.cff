@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use MLForge in research or teaching, please cite it as below."
+title: "MLForge: Machine Learning From Scratch"
+type: software
+version: 0.3.0
+license: MIT
+repository-code: "https://github.com/your-username/mlforge"
+abstract: >-
+  A pure-NumPy library of classical machine-learning algorithms, verified by numerical gradient
+  checks and scikit-learn parity tests, with derivations, benchmarks and executed notebooks.
+keywords: [machine learning, numpy, from scratch, automatic differentiation, education]
+authors:
+  - name: "MLForge Contributors"
