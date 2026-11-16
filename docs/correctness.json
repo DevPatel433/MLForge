@@ -1,0 +1,2479 @@
+{
+  "generated_utc": "2026-11-15 21:54",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.4.4",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+  },
+  "tests": {
+    "exit_code": 1,
+    "by_category": {
+      "Numerical gradient checks": {
+        "passed": 63,
+        "failed": 0
+      },
+      "Parity with scikit-learn / SciPy": {
+        "passed": 45,
+        "failed": 0
+      },
+      "Property-based (Hypothesis)": {
+        "passed": 21,
+        "failed": 0
+      },
+      "Unit & invariant tests": {
+        "passed": 239,
+        "failed": 0
+      },
+      "Integration (plots, CLI, examples, notebooks)": {
+        "passed": 34,
+        "failed": 0
+      }
+    },
+    "total": 402,
+    "failures": 0,
+    "skipped": 0,
+    "coverage_percent": 98.64,
+    "statements": 4195
+  },
+  "gradient_checks": [
+    {
+      "check": "MSE loss (+ L2)",
+      "relative_error": 1.232408934254463e-10,
+      "passed": true
+    },
+    {
+      "check": "Logistic loss (+ L2)",
+      "relative_error": 2.5865051803435926e-10,
+      "passed": true
+    },
+    {
+      "check": "Softmax loss (+ L2)",
+      "relative_error": 3.4062308532368947e-10,
+      "passed": true
+    },
+    {
+      "check": "Squared-hinge SVM loss",
+      "relative_error": 1.0756268728083929e-10,
+      "passed": true
+    },
+    {
+      "check": "MLP backprop (ReLU)",
+      "relative_error": 2.2850741399227722e-10,
+      "passed": true
+    },
+    {
+      "check": "MLP backprop (LeakyReLU)",
+      "relative_error": 2.483279984518461e-10,
+      "passed": true
+    },
+    {
+      "check": "MLP backprop (Tanh)",
+      "relative_error": 3.4245140188187226e-10,
+      "passed": true
+    },
+    {
+      "check": "MLP backprop (Sigmoid)",
+      "relative_error": 4.836993277187456e-10,
+      "passed": true
+    },
+    {
+      "check": "Conv2D (stride 2, padding 1)",
+      "relative_error": 3.2311222436930696e-10,
+      "passed": true
+    },
+    {
+      "check": "Whole CNN (conv-pool-conv-dense)",
+      "relative_error": 2.9824769364209906e-10,
+      "passed": true
+    },
+    {
+      "check": "LSTM -> Dense (BPTT, last state)",
+      "relative_error": 8.776190177014249e-10,
+      "passed": true
+    },
+    {
+      "check": "MSE head (regression network)",
+      "relative_error": 1.1904796059885553e-10,
+      "passed": true
+    },
+    {
+      "check": "Autograd engine (random expression)",
+      "relative_error": 1.8247934005478154e-10,
+      "passed": true
+    }
+  ],
+  "mutation": {
+    "killed": 207,
+    "tested": 220,
+    "modules": {
+      "utils/math_utils.py": {
+        "module": "utils/math_utils.py",
+        "sites": 32,
+        "tested": 10,
+        "killed": 9,
+        "score": 0.9,
+        "tests": [
+          "tests/test_math_utils.py",
+          "tests/test_properties.py"
+        ],
+        "mutants": [
+          {
+            "site": 1,
+            "mutation": "line 10: constant 0 -> 1",
+            "killed": true,
+            "seconds": 0.67
+          },
+          {
+            "site": 8,
+            "mutation": "line 30: Mult -> Div",
+            "killed": true,
+            "seconds": 0.73
+          },
+          {
+            "site": 9,
+            "mutation": "line 31: Eq -> NotEq",
+            "killed": true,
+            "seconds": 0.74
+          },
+          {
+            "site": 12,
+            "mutation": "line 33: Div -> Mult",
+            "killed": true,
+            "seconds": 0.66
+          },
+          {
+            "site": 13,
+            "mutation": "line 35: constant 0 -> 1",
+            "killed": true,
+            "seconds": 0.67
+          },
+          {
+            "site": 15,
+            "mutation": "line 37: constant 0 -> 1",
+            "killed": true,
+            "seconds": 0.68
+          },
+          {
+            "site": 16,
+            "mutation": "line 38: constant 0 -> 1",
+            "killed": true,
+            "seconds": 0.67
+          },
+          {
+            "site": 24,
+            "mutation": "line 49: constant 500 -> 501",
+            "killed": false,
+            "seconds": 10.06
+          },
+          {
+            "site": 28,
+            "mutation": "line 50: constant 1.0 -> 2.0",
+            "killed": true,
+            "seconds": 0.66
+          },
+          {
+            "site": 31,
+            "mutation": "line 55: Div -> Mult",
+            "killed": true,
+            "seconds": 0.69
+          }
+        ]
+      },
+      "utils/pairwise.py": {
+        "module": "utils/pairwise.py",
+        "sites": 52,
+        "tested": 10,
+        "killed": 7,
+        "score": 0.7,
+        "tests": [
+          "tests/test_math_utils.py",
+          "tests/test_properties.py"
+        ],
+        "mutants": [
+          {
+            "site": 2,
+            "mutation": "line 14: Sub -> Add",
+            "killed": true,
+            "seconds": 0.68
+          },
+          {
+            "site": 16,
+            "mutation": "line 20: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.79
+          },
+          {
+            "site": 19,
+            "mutation": "line 22: constant 0 -> 1",
+            "killed": true,
+            "seconds": 0.92
+          },
+          {
+            "site": 24,
+            "mutation": "line 24: Sub -> Add",
+            "killed": true,
+            "seconds": 0.83
+          },
+          {
+            "site": 25,
+            "mutation": "line 24: constant 1.0 -> 2.0",
+            "killed": true,
+            "seconds": 0.86
+          },
+          {
+            "site": 26,
+            "mutation": "line 24: Div -> Mult",
+            "killed": true,
+            "seconds": 0.65
+          },
+          {
+            "site": 30,
+            "mutation": "line 26: constant 1 -> 2",
+            "killed": false,
+            "seconds": 10.58
+          },
+          {
+            "site": 31,
+            "mutation": "line 26: constant 1 -> 2",
+            "killed": false,
+            "seconds": 10.26
+          },
+          {
+            "site": 32,
+            "mutation": "line 26: Mult -> Div",
+            "killed": false,
+            "seconds": 10.15
+          },
+          {
+            "site": 48,
+            "mutation": "line 34: Pow -> Mult",
+            "killed": true,
+            "seconds": 0.83
+          }
+        ]
+      },
+      "utils/gradcheck.py": {
+        "module": "utils/gradcheck.py",
+        "sites": 15,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_gradients.py"
+        ],
+        "mutants": [
+          {
+            "site": 0,
+            "mutation": "line 10: constant 1e-06 -> 1.000001",
+            "killed": true,
+            "seconds": 0.55
+          },
+          {
+            "site": 2,
+            "mutation": "line 18: Add -> Sub",
+            "killed": true,
+            "seconds": 0.5
+          },
+          {
+            "site": 3,
+            "mutation": "line 20: Sub -> Add",
+            "killed": true,
+            "seconds": 0.53
+          },
+          {
+            "site": 4,
+            "mutation": "line 23: Div -> Mult",
+            "killed": true,
+            "seconds": 0.62
+          },
+          {
+            "site": 6,
+            "mutation": "line 23: Mult -> Div",
+            "killed": true,
+            "seconds": 0.56
+          },
+          {
+            "site": 7,
+            "mutation": "line 23: constant 2 -> 3",
+            "killed": true,
+            "seconds": 0.66
+          },
+          {
+            "site": 8,
+            "mutation": "line 29: Add -> Sub",
+            "killed": true,
+            "seconds": 0.59
+          },
+          {
+            "site": 12,
+            "mutation": "line 32: constant 1e-06 -> 1.000001",
+            "killed": true,
+            "seconds": 0.71
+          },
+          {
+            "site": 13,
+            "mutation": "line 32: constant 1e-05 -> 1.00001",
+            "killed": true,
+            "seconds": 0.67
+          },
+          {
+            "site": 14,
+            "mutation": "line 39: Lt -> LtE",
+            "killed": true,
+            "seconds": 0.63
+          }
+        ]
+      },
+      "metrics/regression.py": {
+        "module": "metrics/regression.py",
+        "sites": 31,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_metrics.py",
+          "tests/test_properties.py",
+          "tests/test_sklearn_parity.py::test_all_metrics_match"
+        ],
+        "mutants": [
+          {
+            "site": 1,
+            "mutation": "line 12: Sub -> Add",
+            "killed": true,
+            "seconds": 2.19
+          },
+          {
+            "site": 8,
+            "mutation": "line 24: Pow -> Mult",
+            "killed": true,
+            "seconds": 2.19
+          },
+          {
+            "site": 9,
+            "mutation": "line 24: Sub -> Add",
+            "killed": true,
+            "seconds": 2.21
+          },
+          {
+            "site": 12,
+            "mutation": "line 25: constant 0 -> 1",
+            "killed": true,
+            "seconds": 2.16
+          },
+          {
+            "site": 13,
+            "mutation": "line 26: Eq -> NotEq",
+            "killed": true,
+            "seconds": 2.14
+          },
+          {
+            "site": 15,
+            "mutation": "line 26: constant 1.0 -> 2.0",
+            "killed": true,
+            "seconds": 2.45
+          },
+          {
+            "site": 16,
+            "mutation": "line 26: constant 0.0 -> 1",
+            "killed": true,
+            "seconds": 2.39
+          },
+          {
+            "site": 24,
+            "mutation": "line 45: Gt -> GtE",
+            "killed": true,
+            "seconds": 2.44
+          },
+          {
+            "site": 27,
+            "mutation": "line 45: constant 1 -> 2",
+            "killed": true,
+            "seconds": 2.34
+          },
+          {
+            "site": 29,
+            "mutation": "line 45: Sub -> Add",
+            "killed": true,
+            "seconds": 2.42
+          }
+        ]
+      },
+      "metrics/classification.py": {
+        "module": "metrics/classification.py",
+        "sites": 195,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_metrics.py",
+          "tests/test_properties.py",
+          "tests/test_sklearn_parity.py::test_all_metrics_match"
+        ],
+        "mutants": [
+          {
+            "site": 10,
+            "mutation": "line 29: Div -> Mult",
+            "killed": true,
+            "seconds": 1.5
+          },
+          {
+            "site": 66,
+            "mutation": "line 62: constant 2 -> 3",
+            "killed": true,
+            "seconds": 1.72
+          },
+          {
+            "site": 77,
+            "mutation": "line 74: constant 1 -> 2",
+            "killed": true,
+            "seconds": 1.72
+          },
+          {
+            "site": 98,
+            "mutation": "line 97: constant 1 -> 2",
+            "killed": true,
+            "seconds": 1.66
+          },
+          {
+            "site": 103,
+            "mutation": "line 100: Pow -> Mult",
+            "killed": true,
+            "seconds": 1.74
+          },
+          {
+            "site": 107,
+            "mutation": "line 101: constant 2 -> 3",
+            "killed": true,
+            "seconds": 1.69
+          },
+          {
+            "site": 122,
+            "mutation": "line 115: Div -> Mult",
+            "killed": true,
+            "seconds": 1.76
+          },
+          {
+            "site": 124,
+            "mutation": "line 115: constant 1 -> 2",
+            "killed": true,
+            "seconds": 4.05
+          },
+          {
+            "site": 130,
+            "mutation": "line 117: constant 0 -> 1",
+            "killed": true,
+            "seconds": 1.93
+          },
+          {
+            "site": 194,
+            "mutation": "line 186: Add -> Sub",
+            "killed": true,
+            "seconds": 1.76
+          }
+        ]
+      },
+      "metrics/cluster.py": {
+        "module": "metrics/cluster.py",
+        "sites": 85,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_metrics.py",
+          "tests/test_properties.py",
+          "tests/test_sklearn_parity.py::test_all_metrics_match"
+        ],
+        "mutants": [
+          {
+            "site": 5,
+            "mutation": "line 19: Div -> Mult",
+            "killed": true,
+            "seconds": 1.81
+          },
+          {
+            "site": 33,
+            "mutation": "line 50: constant 2 -> 3",
+            "killed": true,
+            "seconds": 1.89
+          },
+          {
+            "site": 38,
+            "mutation": "line 52: constant 0 -> 1",
+            "killed": true,
+            "seconds": 1.84
+          },
+          {
+            "site": 45,
+            "mutation": "line 52: constant 1.0 -> 2.0",
+            "killed": true,
+            "seconds": 1.75
+          },
+          {
+            "site": 49,
+            "mutation": "line 63: Sub -> Add",
+            "killed": true,
+            "seconds": 9.73
+          },
+          {
+            "site": 51,
+            "mutation": "line 63: constant 2.0 -> 3.0",
+            "killed": true,
+            "seconds": 9.52
+          },
+          {
+            "site": 53,
+            "mutation": "line 66: constant 0 -> 1",
+            "killed": true,
+            "seconds": 9.08
+          },
+          {
+            "site": 61,
+            "mutation": "line 70: Div -> Mult",
+            "killed": true,
+            "seconds": 1.86
+          },
+          {
+            "site": 62,
+            "mutation": "line 70: Sub -> Add",
+            "killed": true,
+            "seconds": 1.73
+          },
+          {
+            "site": 65,
+            "mutation": "line 75: Div -> Mult",
+            "killed": true,
+            "seconds": 9.6
+          }
+        ]
+      },
+      "optimization/optimizers.py": {
+        "module": "optimization/optimizers.py",
+        "sites": 76,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_optimization.py",
+          "tests/test_properties.py"
+        ],
+        "mutants": [
+          {
+            "site": 5,
+            "mutation": "line 27: constant 1.0 -> 2.0",
+            "killed": true,
+            "seconds": 0.71
+          },
+          {
+            "site": 33,
+            "mutation": "line 111: constant 0.01 -> 1.01",
+            "killed": true,
+            "seconds": 0.87
+          },
+          {
+            "site": 38,
+            "mutation": "line 121: Mult -> Div",
+            "killed": true,
+            "seconds": 0.86
+          },
+          {
+            "site": 45,
+            "mutation": "line 122: Mult -> Div",
+            "killed": true,
+            "seconds": 0.73
+          },
+          {
+            "site": 49,
+            "mutation": "line 127: constant 0.999 -> 1.999",
+            "killed": true,
+            "seconds": 0.76
+          },
+          {
+            "site": 51,
+            "mutation": "line 134: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.78
+          },
+          {
+            "site": 53,
+            "mutation": "line 138: Mult -> Div",
+            "killed": true,
+            "seconds": 0.71
+          },
+          {
+            "site": 61,
+            "mutation": "line 139: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.67
+          },
+          {
+            "site": 62,
+            "mutation": "line 139: Pow -> Mult",
+            "killed": true,
+            "seconds": 0.77
+          },
+          {
+            "site": 65,
+            "mutation": "line 140: Sub -> Add",
+            "killed": true,
+            "seconds": 0.81
+          }
+        ]
+      },
+      "optimization/schedules.py": {
+        "module": "optimization/schedules.py",
+        "sites": 28,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_optimization.py"
+        ],
+        "mutants": [
+          {
+            "site": 1,
+            "mutation": "line 6: constant 100 -> 101",
+            "killed": true,
+            "seconds": 0.71
+          },
+          {
+            "site": 8,
+            "mutation": "line 26: Add -> Sub",
+            "killed": true,
+            "seconds": 0.81
+          },
+          {
+            "site": 9,
+            "mutation": "line 26: constant 1.0 -> 2.0",
+            "killed": true,
+            "seconds": 0.78
+          },
+          {
+            "site": 12,
+            "mutation": "line 30: constant 0.0 -> 1",
+            "killed": true,
+            "seconds": 0.78
+          },
+          {
+            "site": 13,
+            "mutation": "line 34: Mult -> Div",
+            "killed": true,
+            "seconds": 0.67
+          },
+          {
+            "site": 15,
+            "mutation": "line 34: Add -> Sub",
+            "killed": true,
+            "seconds": 0.6
+          },
+          {
+            "site": 16,
+            "mutation": "line 34: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.6
+          },
+          {
+            "site": 24,
+            "mutation": "line 44: constant 1.0 -> 2.0",
+            "killed": true,
+            "seconds": 0.71
+          },
+          {
+            "site": 26,
+            "mutation": "line 44: Add -> Sub",
+            "killed": true,
+            "seconds": 0.69
+          },
+          {
+            "site": 27,
+            "mutation": "line 44: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.76
+          }
+        ]
+      },
+      "optimization/optimize.py": {
+        "module": "optimization/optimize.py",
+        "sites": 157,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_optimization.py"
+        ],
+        "mutants": [
+          {
+            "site": 10,
+            "mutation": "line 47: Sub -> Add",
+            "killed": true,
+            "seconds": 0.83
+          },
+          {
+            "site": 66,
+            "mutation": "line 86: Pow -> Mult",
+            "killed": true,
+            "seconds": 0.72
+          },
+          {
+            "site": 77,
+            "mutation": "line 86: constant 2.625 -> 3.625",
+            "killed": true,
+            "seconds": 0.7
+          },
+          {
+            "site": 91,
+            "mutation": "line 90: constant 2 -> 3",
+            "killed": true,
+            "seconds": 0.68
+          },
+          {
+            "site": 98,
+            "mutation": "line 91: Add -> Sub",
+            "killed": true,
+            "seconds": 0.75
+          },
+          {
+            "site": 103,
+            "mutation": "line 91: Sub -> Add",
+            "killed": true,
+            "seconds": 0.72
+          },
+          {
+            "site": 107,
+            "mutation": "line 91: constant 2 -> 3",
+            "killed": true,
+            "seconds": 0.75
+          },
+          {
+            "site": 122,
+            "mutation": "line 91: Mult -> Div",
+            "killed": true,
+            "seconds": 0.71
+          },
+          {
+            "site": 124,
+            "mutation": "line 91: Mult -> Div",
+            "killed": true,
+            "seconds": 0.71
+          },
+          {
+            "site": 130,
+            "mutation": "line 91: Mult -> Div",
+            "killed": true,
+            "seconds": 0.69
+          }
+        ]
+      },
+      "linear_model/losses.py": {
+        "module": "linear_model/losses.py",
+        "sites": 64,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_gradients.py"
+        ],
+        "mutants": [
+          {
+            "site": 2,
+            "mutation": "line 17: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.68
+          },
+          {
+            "site": 16,
+            "mutation": "line 20: Div -> Mult",
+            "killed": true,
+            "seconds": 0.62
+          },
+          {
+            "site": 25,
+            "mutation": "line 31: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.6
+          },
+          {
+            "site": 26,
+            "mutation": "line 32: Add -> Sub",
+            "killed": true,
+            "seconds": 0.56
+          },
+          {
+            "site": 31,
+            "mutation": "line 35: Sub -> Add",
+            "killed": true,
+            "seconds": 0.6
+          },
+          {
+            "site": 32,
+            "mutation": "line 37: Div -> Mult",
+            "killed": true,
+            "seconds": 0.6
+          },
+          {
+            "site": 48,
+            "mutation": "line 55: Sub -> Add",
+            "killed": true,
+            "seconds": 0.6
+          },
+          {
+            "site": 49,
+            "mutation": "line 55: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.62
+          },
+          {
+            "site": 50,
+            "mutation": "line 56: Mult -> Div",
+            "killed": true,
+            "seconds": 0.64
+          },
+          {
+            "site": 56,
+            "mutation": "line 60: constant 2 -> 3",
+            "killed": true,
+            "seconds": 0.66
+          }
+        ]
+      },
+      "linear_model/regularized.py": {
+        "module": "linear_model/regularized.py",
+        "sites": 76,
+        "tested": 10,
+        "killed": 8,
+        "score": 0.8,
+        "tests": [
+          "tests/test_linear_models.py",
+          "tests/test_sklearn_parity.py::test_ols_ridge_lasso_elasticnet"
+        ],
+        "mutants": [
+          {
+            "site": 5,
+            "mutation": "line 26: Sub -> Add",
+            "killed": true,
+            "seconds": 2.46
+          },
+          {
+            "site": 33,
+            "mutation": "line 56: constant 1 -> 2",
+            "killed": true,
+            "seconds": 2.79
+          },
+          {
+            "site": 38,
+            "mutation": "line 60: constant 0 -> 1",
+            "killed": true,
+            "seconds": 2.51
+          },
+          {
+            "site": 45,
+            "mutation": "line 69: Div -> Mult",
+            "killed": true,
+            "seconds": 2.42
+          },
+          {
+            "site": 49,
+            "mutation": "line 71: Sub -> Add",
+            "killed": true,
+            "seconds": 2.32
+          },
+          {
+            "site": 51,
+            "mutation": "line 75: Lt -> LtE",
+            "killed": false,
+            "seconds": 2.7
+          },
+          {
+            "site": 53,
+            "mutation": "line 78: Add -> Sub",
+            "killed": false,
+            "seconds": 2.73
+          },
+          {
+            "site": 61,
+            "mutation": "line 81: Add -> Sub",
+            "killed": true,
+            "seconds": 2.6
+          },
+          {
+            "site": 62,
+            "mutation": "line 81: Div -> Mult",
+            "killed": true,
+            "seconds": 2.78
+          },
+          {
+            "site": 65,
+            "mutation": "line 82: Sub -> Add",
+            "killed": true,
+            "seconds": 2.86
+          }
+        ]
+      },
+      "preprocessing/scalers.py": {
+        "module": "preprocessing/scalers.py",
+        "sites": 62,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_preprocessing_model_selection.py",
+          "tests/test_properties.py",
+          "tests/test_sklearn_parity.py::test_scalers_and_encoders_match"
+        ],
+        "mutants": [
+          {
+            "site": 2,
+            "mutation": "line 15: constant 0 -> 1",
+            "killed": true,
+            "seconds": 2.25
+          },
+          {
+            "site": 16,
+            "mutation": "line 34: constant 0 -> 1",
+            "killed": true,
+            "seconds": 3.74
+          },
+          {
+            "site": 24,
+            "mutation": "line 47: Add -> Sub",
+            "killed": true,
+            "seconds": 2.13
+          },
+          {
+            "site": 25,
+            "mutation": "line 47: Mult -> Div",
+            "killed": true,
+            "seconds": 2.35
+          },
+          {
+            "site": 26,
+            "mutation": "line 47: Div -> Mult",
+            "killed": true,
+            "seconds": 2.33
+          },
+          {
+            "site": 31,
+            "mutation": "line 54: Div -> Mult",
+            "killed": true,
+            "seconds": 2.18
+          },
+          {
+            "site": 32,
+            "mutation": "line 54: Sub -> Add",
+            "killed": true,
+            "seconds": 2.23
+          },
+          {
+            "site": 48,
+            "mutation": "line 91: Div -> Mult",
+            "killed": true,
+            "seconds": 2.32
+          },
+          {
+            "site": 54,
+            "mutation": "line 111: Eq -> NotEq",
+            "killed": true,
+            "seconds": 2.18
+          },
+          {
+            "site": 56,
+            "mutation": "line 113: Eq -> NotEq",
+            "killed": true,
+            "seconds": 2.27
+          }
+        ]
+      },
+      "preprocessing/encoders.py": {
+        "module": "preprocessing/encoders.py",
+        "sites": 22,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_preprocessing_model_selection.py",
+          "tests/test_properties.py",
+          "tests/test_sklearn_parity.py::test_scalers_and_encoders_match"
+        ],
+        "mutants": [
+          {
+            "site": 1,
+            "mutation": "line 27: constant 1 -> 2",
+            "killed": true,
+            "seconds": 2.22
+          },
+          {
+            "site": 4,
+            "mutation": "line 35: constant 1 -> 2",
+            "killed": true,
+            "seconds": 2.11
+          },
+          {
+            "site": 8,
+            "mutation": "line 78: constant 0 -> 1",
+            "killed": true,
+            "seconds": 2.16
+          },
+          {
+            "site": 12,
+            "mutation": "line 92: constant 0 -> 1",
+            "killed": true,
+            "seconds": 2.04
+          },
+          {
+            "site": 13,
+            "mutation": "line 94: Sub -> Add",
+            "killed": true,
+            "seconds": 2.15
+          },
+          {
+            "site": 14,
+            "mutation": "line 94: constant 1 -> 2",
+            "killed": true,
+            "seconds": 2.42
+          },
+          {
+            "site": 15,
+            "mutation": "line 94: constant 0 -> 1",
+            "killed": true,
+            "seconds": 2.39
+          },
+          {
+            "site": 16,
+            "mutation": "line 95: Add -> Sub",
+            "killed": true,
+            "seconds": 2.22
+          },
+          {
+            "site": 17,
+            "mutation": "line 97: Sub -> Add",
+            "killed": true,
+            "seconds": 2.11
+          },
+          {
+            "site": 21,
+            "mutation": "line 106: constant 1 -> 2",
+            "killed": true,
+            "seconds": 2.29
+          }
+        ]
+      },
+      "model_selection/split.py": {
+        "module": "model_selection/split.py",
+        "sites": 28,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_preprocessing_model_selection.py",
+          "tests/test_properties.py"
+        ],
+        "mutants": [
+          {
+            "site": 1,
+            "mutation": "line 7: constant 0 -> 1",
+            "killed": true,
+            "seconds": 0.63
+          },
+          {
+            "site": 8,
+            "mutation": "line 16: remove `not`",
+            "killed": true,
+            "seconds": 0.7
+          },
+          {
+            "site": 9,
+            "mutation": "line 16: constant 0 -> 1",
+            "killed": true,
+            "seconds": 1.48
+          },
+          {
+            "site": 12,
+            "mutation": "line 26: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.97
+          },
+          {
+            "site": 13,
+            "mutation": "line 26: Div -> Mult",
+            "killed": true,
+            "seconds": 0.71
+          },
+          {
+            "site": 15,
+            "mutation": "line 44: constant 5 -> 6",
+            "killed": true,
+            "seconds": 1.03
+          },
+          {
+            "site": 16,
+            "mutation": "line 45: Lt -> LtE",
+            "killed": true,
+            "seconds": 1.46
+          },
+          {
+            "site": 24,
+            "mutation": "line 75: constant 0 -> 1",
+            "killed": true,
+            "seconds": 0.75
+          },
+          {
+            "site": 26,
+            "mutation": "line 87: constant 0.2 -> 1.2",
+            "killed": true,
+            "seconds": 0.96
+          },
+          {
+            "site": 27,
+            "mutation": "line 93: Mult -> Div",
+            "killed": true,
+            "seconds": 0.69
+          }
+        ]
+      },
+      "decomposition/pca.py": {
+        "module": "decomposition/pca.py",
+        "sites": 36,
+        "tested": 10,
+        "killed": 9,
+        "score": 0.9,
+        "tests": [
+          "tests/test_decomposition_bayes_svm.py",
+          "tests/test_properties.py",
+          "tests/test_sklearn_parity.py::test_pca_matches"
+        ],
+        "mutants": [
+          {
+            "site": 2,
+            "mutation": "line 29: Sub -> Add",
+            "killed": true,
+            "seconds": 2.02
+          },
+          {
+            "site": 9,
+            "mutation": "line 36: Pow -> Mult",
+            "killed": true,
+            "seconds": 2.16
+          },
+          {
+            "site": 12,
+            "mutation": "line 36: constant 1 -> 2",
+            "killed": true,
+            "seconds": 2.2
+          },
+          {
+            "site": 16,
+            "mutation": "line 40: constant 1 -> 2",
+            "killed": false,
+            "seconds": 12.58
+          },
+          {
+            "site": 24,
+            "mutation": "line 48: Add -> Sub",
+            "killed": true,
+            "seconds": 2.14
+          },
+          {
+            "site": 25,
+            "mutation": "line 48: constant 1 -> 2",
+            "killed": true,
+            "seconds": 2.18
+          },
+          {
+            "site": 26,
+            "mutation": "line 54: Mult -> Div",
+            "killed": true,
+            "seconds": 3.46
+          },
+          {
+            "site": 29,
+            "mutation": "line 59: Sub -> Add",
+            "killed": true,
+            "seconds": 2.24
+          },
+          {
+            "site": 31,
+            "mutation": "line 68: Mult -> Div",
+            "killed": true,
+            "seconds": 3.19
+          },
+          {
+            "site": 34,
+            "mutation": "line 72: Sub -> Add",
+            "killed": true,
+            "seconds": 2.22
+          }
+        ]
+      },
+      "bayes/naive_bayes.py": {
+        "module": "bayes/naive_bayes.py",
+        "sites": 58,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_decomposition_bayes_svm.py",
+          "tests/test_sklearn_parity.py::test_naive_bayes_matches"
+        ],
+        "mutants": [
+          {
+            "site": 2,
+            "mutation": "line 11: constant 1 -> 2",
+            "killed": true,
+            "seconds": 2.14
+          },
+          {
+            "site": 16,
+            "mutation": "line 39: constant 0 -> 1",
+            "killed": true,
+            "seconds": 3.43
+          },
+          {
+            "site": 19,
+            "mutation": "line 48: Mult -> Div",
+            "killed": true,
+            "seconds": 3.13
+          },
+          {
+            "site": 24,
+            "mutation": "line 49: constant 0.5 -> 1.5",
+            "killed": true,
+            "seconds": 3.23
+          },
+          {
+            "site": 25,
+            "mutation": "line 49: Div -> Mult",
+            "killed": true,
+            "seconds": 3.26
+          },
+          {
+            "site": 26,
+            "mutation": "line 49: Pow -> Mult",
+            "killed": true,
+            "seconds": 2.02
+          },
+          {
+            "site": 31,
+            "mutation": "line 56: constant 1.0 -> 2.0",
+            "killed": true,
+            "seconds": 3.21
+          },
+          {
+            "site": 32,
+            "mutation": "line 61: Lt -> LtE",
+            "killed": true,
+            "seconds": 1.99
+          },
+          {
+            "site": 48,
+            "mutation": "line 87: Add -> Sub",
+            "killed": true,
+            "seconds": 1.94
+          },
+          {
+            "site": 54,
+            "mutation": "line 94: Add -> Sub",
+            "killed": true,
+            "seconds": 3.09
+          }
+        ]
+      },
+      "neural_network/layers.py": {
+        "module": "neural_network/layers.py",
+        "sites": 92,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_neural_network.py",
+          "tests/test_gradients.py"
+        ],
+        "mutants": [
+          {
+            "site": 5,
+            "mutation": "line 31: constant 2.0 -> 3.0",
+            "killed": true,
+            "seconds": 1.1
+          },
+          {
+            "site": 33,
+            "mutation": "line 86: Sub -> Add",
+            "killed": true,
+            "seconds": 1.07
+          },
+          {
+            "site": 38,
+            "mutation": "line 95: Pow -> Mult",
+            "killed": true,
+            "seconds": 1.11
+          },
+          {
+            "site": 45,
+            "mutation": "line 109: Sub -> Add",
+            "killed": true,
+            "seconds": 1.2
+          },
+          {
+            "site": 49,
+            "mutation": "line 115: remove `not`",
+            "killed": true,
+            "seconds": 0.86
+          },
+          {
+            "site": 51,
+            "mutation": "line 115: constant 1 -> 2",
+            "killed": true,
+            "seconds": 1.02
+          },
+          {
+            "site": 53,
+            "mutation": "line 121: remove `not`",
+            "killed": true,
+            "seconds": 1.02
+          },
+          {
+            "site": 61,
+            "mutation": "line 128: Mult -> Div",
+            "killed": true,
+            "seconds": 1.09
+          },
+          {
+            "site": 62,
+            "mutation": "line 136: constant 0 -> 1",
+            "killed": true,
+            "seconds": 1.22
+          },
+          {
+            "site": 65,
+            "mutation": "line 138: Sub -> Add",
+            "killed": true,
+            "seconds": 0.67
+          }
+        ]
+      },
+      "autograd/tensor.py": {
+        "module": "autograd/tensor.py",
+        "sites": 86,
+        "tested": 10,
+        "killed": 8,
+        "score": 0.8,
+        "tests": [
+          "tests/test_autograd.py"
+        ],
+        "mutants": [
+          {
+            "site": 5,
+            "mutation": "line 32: NotEq -> Eq",
+            "killed": true,
+            "seconds": 0.62
+          },
+          {
+            "site": 33,
+            "mutation": "line 121: Eq -> NotEq",
+            "killed": true,
+            "seconds": 0.61
+          },
+          {
+            "site": 38,
+            "mutation": "line 125: constant 1 -> 2",
+            "killed": false,
+            "seconds": 0.66
+          },
+          {
+            "site": 45,
+            "mutation": "line 132: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.59
+          },
+          {
+            "site": 49,
+            "mutation": "line 134: Eq -> NotEq",
+            "killed": false,
+            "seconds": 0.65
+          },
+          {
+            "site": 51,
+            "mutation": "line 135: Eq -> NotEq",
+            "killed": true,
+            "seconds": 0.7
+          },
+          {
+            "site": 53,
+            "mutation": "line 144: and <-> or",
+            "killed": true,
+            "seconds": 0.63
+          },
+          {
+            "site": 61,
+            "mutation": "line 166: Mult -> Div",
+            "killed": true,
+            "seconds": 0.66
+          },
+          {
+            "site": 62,
+            "mutation": "line 166: Gt -> GtE",
+            "killed": true,
+            "seconds": 0.63
+          },
+          {
+            "site": 65,
+            "mutation": "line 171: Sub -> Add",
+            "killed": true,
+            "seconds": 0.61
+          }
+        ]
+      },
+      "neural_network/conv.py": {
+        "module": "neural_network/conv.py",
+        "sites": 82,
+        "tested": 10,
+        "killed": 8,
+        "score": 0.8,
+        "tests": [
+          "tests/test_conv_recurrent.py"
+        ],
+        "mutants": [
+          {
+            "site": 5,
+            "mutation": "line 29: Mult -> Div",
+            "killed": true,
+            "seconds": 2.48
+          },
+          {
+            "site": 33,
+            "mutation": "line 47: constant 1 -> 2",
+            "killed": false,
+            "seconds": 2.36
+          },
+          {
+            "site": 38,
+            "mutation": "line 52: constant 0 -> 1",
+            "killed": true,
+            "seconds": 0.54
+          },
+          {
+            "site": 45,
+            "mutation": "line 56: constant 1 -> 2",
+            "killed": false,
+            "seconds": 2.5
+          },
+          {
+            "site": 49,
+            "mutation": "line 61: Mult -> Div",
+            "killed": true,
+            "seconds": 0.54
+          },
+          {
+            "site": 51,
+            "mutation": "line 61: constant 3 -> 4",
+            "killed": true,
+            "seconds": 0.57
+          },
+          {
+            "site": 53,
+            "mutation": "line 61: constant 2 -> 3",
+            "killed": true,
+            "seconds": 0.51
+          },
+          {
+            "site": 61,
+            "mutation": "line 83: constant 2 -> 3",
+            "killed": true,
+            "seconds": 0.79
+          },
+          {
+            "site": 62,
+            "mutation": "line 83: constant 4 -> 5",
+            "killed": true,
+            "seconds": 0.81
+          },
+          {
+            "site": 65,
+            "mutation": "line 83: Mult -> Div",
+            "killed": true,
+            "seconds": 0.82
+          }
+        ]
+      },
+      "neural_network/recurrent.py": {
+        "module": "neural_network/recurrent.py",
+        "sites": 72,
+        "tested": 10,
+        "killed": 9,
+        "score": 0.9,
+        "tests": [
+          "tests/test_conv_recurrent.py"
+        ],
+        "mutants": [
+          {
+            "site": 5,
+            "mutation": "line 6: constant 500 -> 501",
+            "killed": false,
+            "seconds": 2.97
+          },
+          {
+            "site": 22,
+            "mutation": "line 39: Add -> Sub",
+            "killed": true,
+            "seconds": 1.62
+          },
+          {
+            "site": 33,
+            "mutation": "line 41: Mult -> Div",
+            "killed": true,
+            "seconds": 1.66
+          },
+          {
+            "site": 38,
+            "mutation": "line 58: Sub -> Add",
+            "killed": true,
+            "seconds": 1.85
+          },
+          {
+            "site": 49,
+            "mutation": "line 61: Mult -> Div",
+            "killed": true,
+            "seconds": 1.79
+          },
+          {
+            "site": 51,
+            "mutation": "line 61: Mult -> Div",
+            "killed": true,
+            "seconds": 1.85
+          },
+          {
+            "site": 53,
+            "mutation": "line 62: Mult -> Div",
+            "killed": true,
+            "seconds": 1.71
+          },
+          {
+            "site": 61,
+            "mutation": "line 62: Sub -> Add",
+            "killed": true,
+            "seconds": 1.63
+          },
+          {
+            "site": 62,
+            "mutation": "line 62: constant 1 -> 2",
+            "killed": true,
+            "seconds": 1.55
+          },
+          {
+            "site": 65,
+            "mutation": "line 62: Mult -> Div",
+            "killed": true,
+            "seconds": 1.72
+          }
+        ]
+      },
+      "tree/hist_boosting.py": {
+        "module": "tree/hist_boosting.py",
+        "sites": 184,
+        "tested": 10,
+        "killed": 9,
+        "score": 0.9,
+        "tests": [
+          "tests/test_hist_boosting.py"
+        ],
+        "mutants": [
+          {
+            "site": 10,
+            "mutation": "line 39: constant 2.0 -> 3.0",
+            "killed": true,
+            "seconds": 0.49
+          },
+          {
+            "site": 66,
+            "mutation": "line 98: constant 1 -> 2",
+            "killed": false,
+            "seconds": 2.19
+          },
+          {
+            "site": 77,
+            "mutation": "line 111: constant 0 -> 1",
+            "killed": true,
+            "seconds": 2.23
+          },
+          {
+            "site": 91,
+            "mutation": "line 139: constant 1 -> 2",
+            "killed": true,
+            "seconds": 0.52
+          },
+          {
+            "site": 98,
+            "mutation": "line 154: constant 100 -> 101",
+            "killed": true,
+            "seconds": 2.18
+          },
+          {
+            "site": 103,
+            "mutation": "line 154: constant 255 -> 256",
+            "killed": true,
+            "seconds": 2.09
+          },
+          {
+            "site": 107,
+            "mutation": "line 174: constant 0 -> 1",
+            "killed": true,
+            "seconds": 2.31
+          },
+          {
+            "site": 122,
+            "mutation": "line 225: Eq -> NotEq",
+            "killed": true,
+            "seconds": 1.93
+          },
+          {
+            "site": 124,
+            "mutation": "line 226: constant 1 -> 2",
+            "killed": true,
+            "seconds": 1.84
+          },
+          {
+            "site": 130,
+            "mutation": "line 227: Sub -> Add",
+            "killed": true,
+            "seconds": 2.23
+          }
+        ]
+      },
+      "tree/decision_tree.py": {
+        "module": "tree/decision_tree.py",
+        "sites": 183,
+        "tested": 10,
+        "killed": 10,
+        "score": 1.0,
+        "tests": [
+          "tests/test_tree_ensembles.py",
+          "tests/test_sklearn_parity.py::test_decision_tree_structure_matches"
+        ],
+        "mutants": [
+          {
+            "site": 10,
+            "mutation": "line 35: Div -> Mult",
+            "killed": true,
+            "seconds": 1.57
+          },
+          {
+            "site": 66,
+            "mutation": "line 111: Div -> Mult",
+            "killed": true,
+            "seconds": 1.57
+          },
+          {
+            "site": 77,
+            "mutation": "line 118: constant 1 -> 2",
+            "killed": true,
+            "seconds": 1.64
+          },
+          {
+            "site": 91,
+            "mutation": "line 133: Mult -> Div",
+            "killed": true,
+            "seconds": 2.33
+          },
+          {
+            "site": 98,
+            "mutation": "line 150: Sub -> Add",
+            "killed": true,
+            "seconds": 2.46
+          },
+          {
+            "site": 103,
+            "mutation": "line 163: constant 0.0 -> 1",
+            "killed": true,
+            "seconds": 1.62
+          },
+          {
+            "site": 107,
+            "mutation": "line 172: Mult -> Div",
+            "killed": true,
+            "seconds": 2.32
+          },
+          {
+            "site": 122,
+            "mutation": "line 205: Add -> Sub",
+            "killed": true,
+            "seconds": 1.5
+          },
+          {
+            "site": 124,
+            "mutation": "line 208: constant 3 -> 4",
+            "killed": true,
+            "seconds": 2.54
+          },
+          {
+            "site": 130,
+            "mutation": "line 221: constant 1 -> 2",
+            "killed": true,
+            "seconds": 2.57
+          }
+        ]
+      }
+    }
+  },
+  "parity": [
+    {
+      "algorithm": "LinearRegression (closed form)",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.0011446529999998845,
+      "mlforge_predict_s": 0.00016564500000004756,
+      "mlforge_memory_mb": 0.292104,
+      "mlforge_quality": 0.8886835698801496,
+      "sklearn_fit_s": 0.0015087129999997728,
+      "sklearn_predict_s": 0.0002749580000003249,
+      "sklearn_memory_mb": 0.495508,
+      "sklearn_quality": 0.8886835698801496,
+      "max_abs_diff": 0.0,
+      "slowdown_fit": 0.7586949936800815,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "LinearRegression (gradient descent)",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.1863416280000001,
+      "mlforge_predict_s": 0.00015591599999975614,
+      "mlforge_memory_mb": 0.159572,
+      "mlforge_quality": 0.888683722476781,
+      "sklearn_fit_s": 0.0016193380000002477,
+      "sklearn_predict_s": 0.0003530850000004193,
+      "sklearn_memory_mb": 0.495508,
+      "sklearn_quality": 0.8886835698801496,
+      "max_abs_diff": 0.0015879146803281508,
+      "slowdown_fit": 115.07271983981823,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "Ridge",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.000774606000000233,
+      "mlforge_predict_s": 0.00018342200000009967,
+      "mlforge_memory_mb": 0.292104,
+      "mlforge_quality": 0.8885757874213369,
+      "sklearn_fit_s": 0.0011859550000004049,
+      "sklearn_predict_s": 0.0003305210000004166,
+      "sklearn_memory_mb": 0.306398,
+      "sklearn_quality": 0.8885757874213369,
+      "max_abs_diff": 3.552713678800501e-15,
+      "slowdown_fit": 0.6531495714423976,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "Lasso (coordinate descent)",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.001621484000000173,
+      "mlforge_predict_s": 0.00014632500000022475,
+      "mlforge_memory_mb": 0.4622,
+      "mlforge_quality": 0.882443031438418,
+      "sklearn_fit_s": 0.00138110700000027,
+      "sklearn_predict_s": 0.0003419099999995012,
+      "sklearn_memory_mb": 0.296724,
+      "sklearn_quality": 0.882443031438418,
+      "max_abs_diff": 1.7763568394002505e-15,
+      "slowdown_fit": 1.1740466162287613,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "ElasticNet",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.0016538419999996279,
+      "mlforge_predict_s": 0.00016975800000018637,
+      "mlforge_memory_mb": 0.4622,
+      "mlforge_quality": 0.8830638252477322,
+      "sklearn_fit_s": 0.0010304750000003082,
+      "sklearn_predict_s": 0.00031644699999944237,
+      "sklearn_memory_mb": 0.29677,
+      "sklearn_quality": 0.8830638252477322,
+      "max_abs_diff": 4.440892098500626e-15,
+      "slowdown_fit": 1.60493170625113,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "KNeighborsRegressor",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.00013196999999998127,
+      "mlforge_predict_s": 0.05825914599999926,
+      "mlforge_memory_mb": 0.029994,
+      "mlforge_quality": 0.5418636144406752,
+      "sklearn_fit_s": 0.0005183579999989973,
+      "sklearn_predict_s": 0.005017920000000231,
+      "sklearn_memory_mb": 0.004884,
+      "sklearn_quality": 0.5418636144406752,
+      "max_abs_diff": 0.0,
+      "slowdown_fit": 0.25459238595765193,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "DecisionTreeRegressor",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.040194258000001426,
+      "mlforge_predict_s": 0.0011834340000014265,
+      "mlforge_memory_mb": 2.365726,
+      "mlforge_quality": 0.3877528503225445,
+      "sklearn_fit_s": 0.01706842799999997,
+      "sklearn_predict_s": 0.0004533099999992629,
+      "sklearn_memory_mb": 0.145418,
+      "sklearn_quality": 0.3810807649522371,
+      "max_abs_diff": 5.895810391138148,
+      "slowdown_fit": 2.3548892727556106,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "RandomForestRegressor",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 5.244525187000001,
+      "mlforge_predict_s": 0.1031364659999987,
+      "mlforge_memory_mb": 9.535826,
+      "mlforge_quality": 0.7046513523974081,
+      "sklearn_fit_s": 0.7470114540000026,
+      "sklearn_predict_s": 0.010873045000000303,
+      "sklearn_memory_mb": 0.269365,
+      "sklearn_quality": 0.7133729582881785,
+      "max_abs_diff": 1.5792600676225286,
+      "slowdown_fit": 7.020675732503538,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "GradientBoostingRegressor",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.828193774999999,
+      "mlforge_predict_s": 0.0074560799999972005,
+      "mlforge_memory_mb": 3.273977,
+      "mlforge_quality": 0.7509987103351893,
+      "sklearn_fit_s": 0.4666975400000055,
+      "sklearn_predict_s": 0.00148688600000213,
+      "sklearn_memory_mb": 0.271176,
+      "sklearn_quality": 0.7508579250490663,
+      "max_abs_diff": 0.8145483620701564,
+      "slowdown_fit": 1.7745835450514464,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "HistGradientBoostingRegressor",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.9039819359999797,
+      "mlforge_predict_s": 0.02343696700000919,
+      "mlforge_memory_mb": 3.450395,
+      "mlforge_quality": 0.8391712365624399,
+      "sklearn_fit_s": 0.20082802100000663,
+      "sklearn_predict_s": 0.0044129560000101264,
+      "sklearn_memory_mb": 2.322641,
+      "sklearn_quality": 0.8384086132429335,
+      "max_abs_diff": 0.9616974918262398,
+      "slowdown_fit": 4.501273933282198,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "MLPRegressor",
+      "family": "regression",
+      "dataset": "regression",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.36888458499999643,
+      "mlforge_predict_s": 0.0003657139999972969,
+      "mlforge_memory_mb": 0.892636,
+      "mlforge_quality": 0.9610585371971299,
+      "sklearn_fit_s": 0.15586105600000622,
+      "sklearn_predict_s": 0.000459003999999652,
+      "sklearn_memory_mb": 0.280416,
+      "sklearn_quality": 0.8746452790045752,
+      "max_abs_diff": 10.476979629822074,
+      "slowdown_fit": 2.366752763435542,
+      "difference_metric": "max abs. \u0394 prediction",
+      "quality_metric": "R2",
+      "status": "ok"
+    },
+    {
+      "algorithm": "LogisticRegression (Newton)",
+      "family": "classification",
+      "dataset": "cancer",
+      "n_train": 398,
+      "n_features": 30,
+      "mlforge_fit_s": 0.0039930639999994355,
+      "mlforge_predict_s": 0.0003034719999988056,
+      "mlforge_memory_mb": 0.288488,
+      "mlforge_quality": 0.9766081871345029,
+      "sklearn_fit_s": 0.005281543000002387,
+      "sklearn_predict_s": 0.0003656909999989466,
+      "sklearn_memory_mb": 0.053389,
+      "sklearn_quality": 0.9766081871345029,
+      "max_abs_diff": 3.62364686590233e-07,
+      "slowdown_fit": 0.7560411796320945,
+      "difference_metric": "max abs. \u0394 probability",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "LogisticRegression (gradient descent)",
+      "family": "classification",
+      "dataset": "cancer",
+      "n_train": 398,
+      "n_features": 30,
+      "mlforge_fit_s": 0.42237712299999686,
+      "mlforge_predict_s": 0.0002167110000002026,
+      "mlforge_memory_mb": 0.295404,
+      "mlforge_quality": 0.9766081871345029,
+      "sklearn_fit_s": 0.004985732000001519,
+      "sklearn_predict_s": 0.00042821999999631544,
+      "sklearn_memory_mb": 0.053322,
+      "sklearn_quality": 0.9766081871345029,
+      "max_abs_diff": 7.269012177735235e-07,
+      "slowdown_fit": 84.71717352634842,
+      "difference_metric": "max abs. \u0394 probability",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "SoftmaxRegression",
+      "family": "classification",
+      "dataset": "wine",
+      "n_train": 123,
+      "n_features": 13,
+      "mlforge_fit_s": 0.9699579689999993,
+      "mlforge_predict_s": 0.00015749199999959274,
+      "mlforge_memory_mb": 0.299575,
+      "mlforge_quality": 0.9818181818181818,
+      "sklearn_fit_s": 0.008117187999999942,
+      "sklearn_predict_s": 0.00038208800000205656,
+      "sklearn_memory_mb": 0.052054,
+      "sklearn_quality": 0.9818181818181818,
+      "max_abs_diff": 1.5914079852019647e-05,
+      "slowdown_fit": 119.49433338244799,
+      "difference_metric": "max abs. \u0394 probability",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "Perceptron",
+      "family": "classification",
+      "dataset": "binary",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.36524691700000034,
+      "mlforge_predict_s": 0.00027326500000413034,
+      "mlforge_memory_mb": 0.040232,
+      "mlforge_quality": 0.805,
+      "sklearn_fit_s": 0.003278859000005241,
+      "sklearn_predict_s": 0.00049470199999746,
+      "sklearn_memory_mb": 0.056568,
+      "sklearn_quality": 0.8216666666666667,
+      "max_abs_diff": 0.19666666666666666,
+      "slowdown_fit": 111.39451772687283,
+      "difference_metric": "label disagreement rate",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "KNeighborsClassifier",
+      "family": "classification",
+      "dataset": "digits",
+      "n_train": 1258,
+      "n_features": 64,
+      "mlforge_fit_s": 0.000497964999999212,
+      "mlforge_predict_s": 0.050102299999998934,
+      "mlforge_memory_mb": 0.082506,
+      "mlforge_quality": 0.987012987012987,
+      "sklearn_fit_s": 0.0008396000000008286,
+      "sklearn_predict_s": 0.006578160000000111,
+      "sklearn_memory_mb": 0.067329,
+      "sklearn_quality": 0.987012987012987,
+      "max_abs_diff": 0.0,
+      "slowdown_fit": 0.5930979037621731,
+      "difference_metric": "max abs. \u0394 probability",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "GaussianNB",
+      "family": "classification",
+      "dataset": "cancer",
+      "n_train": 398,
+      "n_features": 30,
+      "mlforge_fit_s": 0.0006839489999990178,
+      "mlforge_predict_s": 0.0003529950000000781,
+      "mlforge_memory_mb": 0.228699,
+      "mlforge_quality": 0.9532163742690059,
+      "sklearn_fit_s": 0.0012802910000004886,
+      "sklearn_predict_s": 0.0004903279999979304,
+      "sklearn_memory_mb": 0.190482,
+      "sklearn_quality": 0.9532163742690059,
+      "max_abs_diff": 6.217248937900877e-15,
+      "slowdown_fit": 0.5342137061017822,
+      "difference_metric": "max abs. \u0394 probability",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "DecisionTreeClassifier",
+      "family": "classification",
+      "dataset": "cancer",
+      "n_train": 398,
+      "n_features": 30,
+      "mlforge_fit_s": 0.010828105999999948,
+      "mlforge_predict_s": 0.00035462900000027275,
+      "mlforge_memory_mb": 1.646688,
+      "mlforge_quality": 0.9415204678362573,
+      "sklearn_fit_s": 0.00545277600000027,
+      "sklearn_predict_s": 0.0003905890000002188,
+      "sklearn_memory_mb": 0.079817,
+      "sklearn_quality": 0.9298245614035088,
+      "max_abs_diff": 0.023391812865497075,
+      "slowdown_fit": 1.9857969592001234,
+      "difference_metric": "label disagreement rate",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "RandomForestClassifier",
+      "family": "classification",
+      "dataset": "digits",
+      "n_train": 1258,
+      "n_features": 64,
+      "mlforge_fit_s": 3.700968496999998,
+      "mlforge_predict_s": 0.08849751800001115,
+      "mlforge_memory_mb": 11.960546,
+      "mlforge_quality": 0.974025974025974,
+      "sklearn_fit_s": 0.2598725739999992,
+      "sklearn_predict_s": 0.0071013789999909704,
+      "sklearn_memory_mb": 0.559018,
+      "sklearn_quality": 0.9758812615955473,
+      "max_abs_diff": 0.01855287569573284,
+      "slowdown_fit": 14.241473965621358,
+      "difference_metric": "label disagreement rate",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "GradientBoostingClassifier",
+      "family": "classification",
+      "dataset": "cancer",
+      "n_train": 398,
+      "n_features": 30,
+      "mlforge_fit_s": 0.3686957430000035,
+      "mlforge_predict_s": 0.004863666000005651,
+      "mlforge_memory_mb": 4.137717,
+      "mlforge_quality": 0.9707602339181286,
+      "sklearn_fit_s": 0.303092448000001,
+      "sklearn_predict_s": 0.0007849500000105536,
+      "sklearn_memory_mb": 0.138554,
+      "sklearn_quality": 0.9649122807017544,
+      "max_abs_diff": 0.4916470178488473,
+      "slowdown_fit": 1.2164464850011778,
+      "difference_metric": "max abs. \u0394 probability",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "HistGradientBoostingClassifier",
+      "family": "classification",
+      "dataset": "digits",
+      "n_train": 1258,
+      "n_features": 64,
+      "mlforge_fit_s": 3.5884226459999695,
+      "mlforge_predict_s": 0.09559301999996705,
+      "mlforge_memory_mb": 4.001922,
+      "mlforge_quality": 0.9666048237476809,
+      "sklearn_fit_s": 2.313743895000016,
+      "sklearn_predict_s": 0.03381977899999811,
+      "sklearn_memory_mb": 6.426512,
+      "sklearn_quality": 0.9666048237476809,
+      "max_abs_diff": 0.0074211502782931356,
+      "slowdown_fit": 1.5509160947996556,
+      "difference_metric": "label disagreement rate",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "SVC (RBF kernel, SMO)",
+      "family": "classification",
+      "dataset": "cancer",
+      "n_train": 398,
+      "n_features": 30,
+      "mlforge_fit_s": 0.03912064499999701,
+      "mlforge_predict_s": 0.00045145400000023983,
+      "mlforge_memory_mb": 2.734846,
+      "mlforge_quality": 0.9883040935672515,
+      "sklearn_fit_s": 0.0034363470000045027,
+      "sklearn_predict_s": 0.0016381929999909062,
+      "sklearn_memory_mb": 0.105224,
+      "sklearn_quality": 0.9883040935672515,
+      "max_abs_diff": 0.0,
+      "slowdown_fit": 11.384369797330057,
+      "difference_metric": "label disagreement rate",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "LinearSVC",
+      "family": "classification",
+      "dataset": "binary",
+      "n_train": 1400,
+      "n_features": 20,
+      "mlforge_fit_s": 0.033156271999999376,
+      "mlforge_predict_s": 0.00019798399999615413,
+      "mlforge_memory_mb": 0.0723,
+      "mlforge_quality": 0.8733333333333333,
+      "sklearn_fit_s": 0.0028444290000066985,
+      "sklearn_predict_s": 0.0004221749999970825,
+      "sklearn_memory_mb": 0.064059,
+      "sklearn_quality": 0.8733333333333333,
+      "max_abs_diff": 0.0,
+      "slowdown_fit": 11.656565166478508,
+      "difference_metric": "label disagreement rate",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "MLPClassifier",
+      "family": "classification",
+      "dataset": "digits",
+      "n_train": 1258,
+      "n_features": 64,
+      "mlforge_fit_s": 0.311273786000001,
+      "mlforge_predict_s": 0.0007039630000065245,
+      "mlforge_memory_mb": 1.630095,
+      "mlforge_quality": 0.9591836734693877,
+      "sklearn_fit_s": 0.15249472899999716,
+      "sklearn_predict_s": 0.0013406489999994164,
+      "sklearn_memory_mb": 0.704915,
+      "sklearn_quality": 0.9461966604823747,
+      "max_abs_diff": 0.06307977736549165,
+      "slowdown_fit": 2.041210132581086,
+      "difference_metric": "label disagreement rate",
+      "quality_metric": "accuracy",
+      "status": "ok"
+    },
+    {
+      "algorithm": "KMeans (k-means++)",
+      "family": "unsupervised",
+      "dataset": "clusters",
+      "n_train": 1500,
+      "n_features": 2,
+      "mlforge_fit_s": 0.014379769999990799,
+      "mlforge_predict_s": 0.0,
+      "mlforge_memory_mb": 0.307418,
+      "mlforge_quality": 0.9196836494918152,
+      "sklearn_fit_s": 0.011073644000006766,
+      "sklearn_predict_s": 0.0,
+      "sklearn_memory_mb": 0.192848,
+      "sklearn_quality": 0.9196836494918152,
+      "max_abs_diff": 0.0,
+      "slowdown_fit": 1.2985580898195763,
+      "difference_metric": "1 - adjusted Rand index",
+      "quality_metric": "ARI",
+      "status": "ok"
+    },
+    {
+      "algorithm": "AgglomerativeClustering (ward)",
+      "family": "unsupervised",
+      "dataset": "clusters",
+      "n_train": 1500,
+      "n_features": 2,
+      "mlforge_fit_s": 0.2510304560000094,
+      "mlforge_predict_s": 0.0,
+      "mlforge_memory_mb": 36.025836,
+      "mlforge_quality": 0.9018882375130114,
+      "sklearn_fit_s": 0.06799224500001344,
+      "sklearn_predict_s": 0.0,
+      "sklearn_memory_mb": 10.12481,
+      "sklearn_quality": 0.9018882375130114,
+      "max_abs_diff": 0.0,
+      "slowdown_fit": 3.6920454090015675,
+      "difference_metric": "1 - adjusted Rand index",
+      "quality_metric": "ARI",
+      "status": "ok"
+    },
+    {
+      "algorithm": "DBSCAN",
+      "family": "unsupervised",
+      "dataset": "moons",
+      "n_train": 1500,
+      "n_features": 2,
+      "mlforge_fit_s": 0.04007836600000303,
+      "mlforge_predict_s": 0.0,
+      "mlforge_memory_mb": 36.025808,
+      "mlforge_quality": 0.9986675543711594,
+      "sklearn_fit_s": 0.013569988999989846,
+      "sklearn_predict_s": 0.0,
+      "sklearn_memory_mb": 0.410675,
+      "sklearn_quality": 0.9986675543711594,
+      "max_abs_diff": 0.0,
+      "slowdown_fit": 2.953456041860684,
+      "difference_metric": "1 - adjusted Rand index",
+      "quality_metric": "ARI",
+      "status": "ok"
+    },
+    {
+      "algorithm": "GaussianMixture (EM)",
+      "family": "unsupervised",
+      "dataset": "clusters",
+      "n_train": 1500,
+      "n_features": 2,
+      "mlforge_fit_s": 0.022069770000001654,
+      "mlforge_predict_s": 0.0,
+      "mlforge_memory_mb": 0.380212,
+      "mlforge_quality": 0.9195297510881997,
+      "sklearn_fit_s": 0.00981197500000519,
+      "sklearn_predict_s": 0.0,
+      "sklearn_memory_mb": 0.428315,
+      "sklearn_quality": 0.9195707189562077,
+      "max_abs_diff": 0.0067377044063418046,
+      "slowdown_fit": 2.24926887807908,
+      "difference_metric": "1 - adjusted Rand index",
+      "quality_metric": "ARI",
+      "status": "ok"
+    },
+    {
+      "algorithm": "PCA (SVD)",
+      "family": "unsupervised",
+      "dataset": "pca",
+      "n_train": 2000,
+      "n_features": 30,
+      "mlforge_fit_s": 0.002613150999991376,
+      "mlforge_predict_s": 0.00045401300000946776,
+      "mlforge_memory_mb": 0.985856,
+      "mlforge_quality": 0.47583533922595994,
+      "sklearn_fit_s": 0.0021048699999965947,
+      "sklearn_predict_s": 0.0005676179999909436,
+      "sklearn_memory_mb": 0.044586,
+      "sklearn_quality": 0.47583533922596,
+      "max_abs_diff": 2.7755575615628914e-16,
+      "slowdown_fit": 1.2414785711210685,
+      "difference_metric": "max abs. \u0394 variance ratio",
+      "quality_metric": "explained variance",
+      "status": "ok"
+    }
+  ],
+  "mnist": {
+    "cnn": {
+      "model": "cnn",
+      "dataset": "MNIST (60,000 train / 10,000 test)",
+      "n_train": 60000,
+      "n_test": 10000,
+      "parameters": 5258,
+      "optimizer": "adam",
+      "learning_rate": 0.002,
+      "batch_size": 64,
+      "epochs": 5,
+      "seed": 0,
+      "final_test_accuracy": 0.9857,
+      "total_training_seconds": 107.4,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.23424628753205343,
+          "train_acc_running": 0.92835,
+          "test_loss": 0.08558165342233293,
+          "test_acc": 0.9752,
+          "epoch_seconds": 22.3
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.07980057025916666,
+          "train_acc_running": 0.97515,
+          "test_loss": 0.06287191131590153,
+          "test_acc": 0.9785,
+          "epoch_seconds": 22.6
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.0594884274592014,
+          "train_acc_running": 0.9813166666666666,
+          "test_loss": 0.0528506816365448,
+          "test_acc": 0.9825,
+          "epoch_seconds": 22.3
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.050091414097073336,
+          "train_acc_running": 0.9842333333333333,
+          "test_loss": 0.04520744320524782,
+          "test_acc": 0.985,
+          "epoch_seconds": 20.3
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.043347771209935826,
+          "train_acc_running": 0.9861166666666666,
+          "test_loss": 0.04488751204655253,
+          "test_acc": 0.9857,
+          "epoch_seconds": 20.0
+        }
+      ],
+      "environment": {
+        "mlforge": "0.3.0",
+        "numpy": "2.4.4",
+        "python": "3.12.3",
+        "machine": "x86_64",
+        "cpu_threads_available": 1
+      }
+    },
+    "mlp": {
+      "model": "mlp",
+      "dataset": "MNIST (60,000 train / 10,000 test)",
+      "n_train": 60000,
+      "n_test": 10000,
+      "parameters": 109386,
+      "optimizer": "adam",
+      "learning_rate": 0.002,
+      "batch_size": 64,
+      "epochs": 8,
+      "seed": 0,
+      "final_test_accuracy": 0.9782,
+      "total_training_seconds": 16.8,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.24761019922285588,
+          "train_acc_running": 0.9248,
+          "test_loss": 0.11838159130586716,
+          "test_acc": 0.9626,
+          "epoch_seconds": 2.0
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.11734249932238058,
+          "train_acc_running": 0.9643166666666667,
+          "test_loss": 0.10616884288506569,
+          "test_acc": 0.9651,
+          "epoch_seconds": 2.0
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.08925458863950707,
+          "train_acc_running": 0.9715833333333334,
+          "test_loss": 0.0883923460462404,
+          "test_acc": 0.9725,
+          "epoch_seconds": 2.2
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.07319782100568875,
+          "train_acc_running": 0.9765,
+          "test_loss": 0.07872016358959552,
+          "test_acc": 0.977,
+          "epoch_seconds": 2.1
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06251770683331372,
+          "train_acc_running": 0.9792333333333333,
+          "test_loss": 0.0857878034637132,
+          "test_acc": 0.973,
+          "epoch_seconds": 2.2
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.05456993669608829,
+          "train_acc_running": 0.9820666666666666,
+          "test_loss": 0.07877060046859546,
+          "test_acc": 0.9765,
+          "epoch_seconds": 2.0
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.049999852427980315,
+          "train_acc_running": 0.9839,
+          "test_loss": 0.08822672788159845,
+          "test_acc": 0.9752,
+          "epoch_seconds": 2.2
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.0467037266148109,
+          "train_acc_running": 0.9848,
+          "test_loss": 0.07341539489738794,
+          "test_acc": 0.9782,
+          "epoch_seconds": 2.2
+        }
+      ],
+      "environment": {
+        "mlforge": "0.3.0",
+        "numpy": "2.4.4",
+        "python": "3.12.3",
+        "machine": "x86_64",
+        "cpu_threads_available": 1
+      }
+    }
+  },
+  "hist_scaling": {
+    "iterations": 20,
+    "features": 20,
+    "rows": [
+      {
+        "n_train": 2000,
+        "exact_seconds": 0.77,
+        "hist_seconds": 0.33,
+        "speedup": 2.3,
+        "exact_r2": 0.7197,
+        "hist_r2": 0.7465
+      },
+      {
+        "n_train": 8000,
+        "exact_seconds": 3.35,
+        "hist_seconds": 0.53,
+        "speedup": 6.3,
+        "exact_r2": 0.7322,
+        "hist_r2": 0.7506
+      },
+      {
+        "n_train": 32000,
+        "exact_seconds": 13.31,
+        "hist_seconds": 1.06,
+        "speedup": 12.6,
+        "exact_r2": 0.7357,
+        "hist_r2": 0.756
+      }
+    ]
+  }
+}

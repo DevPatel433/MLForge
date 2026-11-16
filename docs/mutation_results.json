@@ -1,0 +1,1606 @@
+{
+  "utils/math_utils.py": {
+    "module": "utils/math_utils.py",
+    "sites": 32,
+    "tested": 10,
+    "killed": 9,
+    "score": 0.9,
+    "tests": [
+      "tests/test_math_utils.py",
+      "tests/test_properties.py"
+    ],
+    "mutants": [
+      {
+        "site": 1,
+        "mutation": "line 10: constant 0 -> 1",
+        "killed": true,
+        "seconds": 0.67
+      },
+      {
+        "site": 8,
+        "mutation": "line 30: Mult -> Div",
+        "killed": true,
+        "seconds": 0.73
+      },
+      {
+        "site": 9,
+        "mutation": "line 31: Eq -> NotEq",
+        "killed": true,
+        "seconds": 0.74
+      },
+      {
+        "site": 12,
+        "mutation": "line 33: Div -> Mult",
+        "killed": true,
+        "seconds": 0.66
+      },
+      {
+        "site": 13,
+        "mutation": "line 35: constant 0 -> 1",
+        "killed": true,
+        "seconds": 0.67
+      },
+      {
+        "site": 15,
+        "mutation": "line 37: constant 0 -> 1",
+        "killed": true,
+        "seconds": 0.68
+      },
+      {
+        "site": 16,
+        "mutation": "line 38: constant 0 -> 1",
+        "killed": true,
+        "seconds": 0.67
+      },
+      {
+        "site": 24,
+        "mutation": "line 49: constant 500 -> 501",
+        "killed": false,
+        "seconds": 10.06
+      },
+      {
+        "site": 28,
+        "mutation": "line 50: constant 1.0 -> 2.0",
+        "killed": true,
+        "seconds": 0.66
+      },
+      {
+        "site": 31,
+        "mutation": "line 55: Div -> Mult",
+        "killed": true,
+        "seconds": 0.69
+      }
+    ]
+  },
+  "utils/pairwise.py": {
+    "module": "utils/pairwise.py",
+    "sites": 52,
+    "tested": 10,
+    "killed": 7,
+    "score": 0.7,
+    "tests": [
+      "tests/test_math_utils.py",
+      "tests/test_properties.py"
+    ],
+    "mutants": [
+      {
+        "site": 2,
+        "mutation": "line 14: Sub -> Add",
+        "killed": true,
+        "seconds": 0.68
+      },
+      {
+        "site": 16,
+        "mutation": "line 20: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.79
+      },
+      {
+        "site": 19,
+        "mutation": "line 22: constant 0 -> 1",
+        "killed": true,
+        "seconds": 0.92
+      },
+      {
+        "site": 24,
+        "mutation": "line 24: Sub -> Add",
+        "killed": true,
+        "seconds": 0.83
+      },
+      {
+        "site": 25,
+        "mutation": "line 24: constant 1.0 -> 2.0",
+        "killed": true,
+        "seconds": 0.86
+      },
+      {
+        "site": 26,
+        "mutation": "line 24: Div -> Mult",
+        "killed": true,
+        "seconds": 0.65
+      },
+      {
+        "site": 30,
+        "mutation": "line 26: constant 1 -> 2",
+        "killed": false,
+        "seconds": 10.58
+      },
+      {
+        "site": 31,
+        "mutation": "line 26: constant 1 -> 2",
+        "killed": false,
+        "seconds": 10.26
+      },
+      {
+        "site": 32,
+        "mutation": "line 26: Mult -> Div",
+        "killed": false,
+        "seconds": 10.15
+      },
+      {
+        "site": 48,
+        "mutation": "line 34: Pow -> Mult",
+        "killed": true,
+        "seconds": 0.83
+      }
+    ]
+  },
+  "utils/gradcheck.py": {
+    "module": "utils/gradcheck.py",
+    "sites": 15,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_gradients.py"
+    ],
+    "mutants": [
+      {
+        "site": 0,
+        "mutation": "line 10: constant 1e-06 -> 1.000001",
+        "killed": true,
+        "seconds": 0.55
+      },
+      {
+        "site": 2,
+        "mutation": "line 18: Add -> Sub",
+        "killed": true,
+        "seconds": 0.5
+      },
+      {
+        "site": 3,
+        "mutation": "line 20: Sub -> Add",
+        "killed": true,
+        "seconds": 0.53
+      },
+      {
+        "site": 4,
+        "mutation": "line 23: Div -> Mult",
+        "killed": true,
+        "seconds": 0.62
+      },
+      {
+        "site": 6,
+        "mutation": "line 23: Mult -> Div",
+        "killed": true,
+        "seconds": 0.56
+      },
+      {
+        "site": 7,
+        "mutation": "line 23: constant 2 -> 3",
+        "killed": true,
+        "seconds": 0.66
+      },
+      {
+        "site": 8,
+        "mutation": "line 29: Add -> Sub",
+        "killed": true,
+        "seconds": 0.59
+      },
+      {
+        "site": 12,
+        "mutation": "line 32: constant 1e-06 -> 1.000001",
+        "killed": true,
+        "seconds": 0.71
+      },
+      {
+        "site": 13,
+        "mutation": "line 32: constant 1e-05 -> 1.00001",
+        "killed": true,
+        "seconds": 0.67
+      },
+      {
+        "site": 14,
+        "mutation": "line 39: Lt -> LtE",
+        "killed": true,
+        "seconds": 0.63
+      }
+    ]
+  },
+  "metrics/regression.py": {
+    "module": "metrics/regression.py",
+    "sites": 31,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_metrics.py",
+      "tests/test_properties.py",
+      "tests/test_sklearn_parity.py::test_all_metrics_match"
+    ],
+    "mutants": [
+      {
+        "site": 1,
+        "mutation": "line 12: Sub -> Add",
+        "killed": true,
+        "seconds": 2.19
+      },
+      {
+        "site": 8,
+        "mutation": "line 24: Pow -> Mult",
+        "killed": true,
+        "seconds": 2.19
+      },
+      {
+        "site": 9,
+        "mutation": "line 24: Sub -> Add",
+        "killed": true,
+        "seconds": 2.21
+      },
+      {
+        "site": 12,
+        "mutation": "line 25: constant 0 -> 1",
+        "killed": true,
+        "seconds": 2.16
+      },
+      {
+        "site": 13,
+        "mutation": "line 26: Eq -> NotEq",
+        "killed": true,
+        "seconds": 2.14
+      },
+      {
+        "site": 15,
+        "mutation": "line 26: constant 1.0 -> 2.0",
+        "killed": true,
+        "seconds": 2.45
+      },
+      {
+        "site": 16,
+        "mutation": "line 26: constant 0.0 -> 1",
+        "killed": true,
+        "seconds": 2.39
+      },
+      {
+        "site": 24,
+        "mutation": "line 45: Gt -> GtE",
+        "killed": true,
+        "seconds": 2.44
+      },
+      {
+        "site": 27,
+        "mutation": "line 45: constant 1 -> 2",
+        "killed": true,
+        "seconds": 2.34
+      },
+      {
+        "site": 29,
+        "mutation": "line 45: Sub -> Add",
+        "killed": true,
+        "seconds": 2.42
+      }
+    ]
+  },
+  "metrics/classification.py": {
+    "module": "metrics/classification.py",
+    "sites": 195,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_metrics.py",
+      "tests/test_properties.py",
+      "tests/test_sklearn_parity.py::test_all_metrics_match"
+    ],
+    "mutants": [
+      {
+        "site": 10,
+        "mutation": "line 29: Div -> Mult",
+        "killed": true,
+        "seconds": 1.5
+      },
+      {
+        "site": 66,
+        "mutation": "line 62: constant 2 -> 3",
+        "killed": true,
+        "seconds": 1.72
+      },
+      {
+        "site": 77,
+        "mutation": "line 74: constant 1 -> 2",
+        "killed": true,
+        "seconds": 1.72
+      },
+      {
+        "site": 98,
+        "mutation": "line 97: constant 1 -> 2",
+        "killed": true,
+        "seconds": 1.66
+      },
+      {
+        "site": 103,
+        "mutation": "line 100: Pow -> Mult",
+        "killed": true,
+        "seconds": 1.74
+      },
+      {
+        "site": 107,
+        "mutation": "line 101: constant 2 -> 3",
+        "killed": true,
+        "seconds": 1.69
+      },
+      {
+        "site": 122,
+        "mutation": "line 115: Div -> Mult",
+        "killed": true,
+        "seconds": 1.76
+      },
+      {
+        "site": 124,
+        "mutation": "line 115: constant 1 -> 2",
+        "killed": true,
+        "seconds": 4.05
+      },
+      {
+        "site": 130,
+        "mutation": "line 117: constant 0 -> 1",
+        "killed": true,
+        "seconds": 1.93
+      },
+      {
+        "site": 194,
+        "mutation": "line 186: Add -> Sub",
+        "killed": true,
+        "seconds": 1.76
+      }
+    ]
+  },
+  "metrics/cluster.py": {
+    "module": "metrics/cluster.py",
+    "sites": 85,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_metrics.py",
+      "tests/test_properties.py",
+      "tests/test_sklearn_parity.py::test_all_metrics_match"
+    ],
+    "mutants": [
+      {
+        "site": 5,
+        "mutation": "line 19: Div -> Mult",
+        "killed": true,
+        "seconds": 1.81
+      },
+      {
+        "site": 33,
+        "mutation": "line 50: constant 2 -> 3",
+        "killed": true,
+        "seconds": 1.89
+      },
+      {
+        "site": 38,
+        "mutation": "line 52: constant 0 -> 1",
+        "killed": true,
+        "seconds": 1.84
+      },
+      {
+        "site": 45,
+        "mutation": "line 52: constant 1.0 -> 2.0",
+        "killed": true,
+        "seconds": 1.75
+      },
+      {
+        "site": 49,
+        "mutation": "line 63: Sub -> Add",
+        "killed": true,
+        "seconds": 9.73
+      },
+      {
+        "site": 51,
+        "mutation": "line 63: constant 2.0 -> 3.0",
+        "killed": true,
+        "seconds": 9.52
+      },
+      {
+        "site": 53,
+        "mutation": "line 66: constant 0 -> 1",
+        "killed": true,
+        "seconds": 9.08
+      },
+      {
+        "site": 61,
+        "mutation": "line 70: Div -> Mult",
+        "killed": true,
+        "seconds": 1.86
+      },
+      {
+        "site": 62,
+        "mutation": "line 70: Sub -> Add",
+        "killed": true,
+        "seconds": 1.73
+      },
+      {
+        "site": 65,
+        "mutation": "line 75: Div -> Mult",
+        "killed": true,
+        "seconds": 9.6
+      }
+    ]
+  },
+  "optimization/optimizers.py": {
+    "module": "optimization/optimizers.py",
+    "sites": 76,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_optimization.py",
+      "tests/test_properties.py"
+    ],
+    "mutants": [
+      {
+        "site": 5,
+        "mutation": "line 27: constant 1.0 -> 2.0",
+        "killed": true,
+        "seconds": 0.71
+      },
+      {
+        "site": 33,
+        "mutation": "line 111: constant 0.01 -> 1.01",
+        "killed": true,
+        "seconds": 0.87
+      },
+      {
+        "site": 38,
+        "mutation": "line 121: Mult -> Div",
+        "killed": true,
+        "seconds": 0.86
+      },
+      {
+        "site": 45,
+        "mutation": "line 122: Mult -> Div",
+        "killed": true,
+        "seconds": 0.73
+      },
+      {
+        "site": 49,
+        "mutation": "line 127: constant 0.999 -> 1.999",
+        "killed": true,
+        "seconds": 0.76
+      },
+      {
+        "site": 51,
+        "mutation": "line 134: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.78
+      },
+      {
+        "site": 53,
+        "mutation": "line 138: Mult -> Div",
+        "killed": true,
+        "seconds": 0.71
+      },
+      {
+        "site": 61,
+        "mutation": "line 139: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.67
+      },
+      {
+        "site": 62,
+        "mutation": "line 139: Pow -> Mult",
+        "killed": true,
+        "seconds": 0.77
+      },
+      {
+        "site": 65,
+        "mutation": "line 140: Sub -> Add",
+        "killed": true,
+        "seconds": 0.81
+      }
+    ]
+  },
+  "optimization/schedules.py": {
+    "module": "optimization/schedules.py",
+    "sites": 28,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_optimization.py"
+    ],
+    "mutants": [
+      {
+        "site": 1,
+        "mutation": "line 6: constant 100 -> 101",
+        "killed": true,
+        "seconds": 0.71
+      },
+      {
+        "site": 8,
+        "mutation": "line 26: Add -> Sub",
+        "killed": true,
+        "seconds": 0.81
+      },
+      {
+        "site": 9,
+        "mutation": "line 26: constant 1.0 -> 2.0",
+        "killed": true,
+        "seconds": 0.78
+      },
+      {
+        "site": 12,
+        "mutation": "line 30: constant 0.0 -> 1",
+        "killed": true,
+        "seconds": 0.78
+      },
+      {
+        "site": 13,
+        "mutation": "line 34: Mult -> Div",
+        "killed": true,
+        "seconds": 0.67
+      },
+      {
+        "site": 15,
+        "mutation": "line 34: Add -> Sub",
+        "killed": true,
+        "seconds": 0.6
+      },
+      {
+        "site": 16,
+        "mutation": "line 34: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.6
+      },
+      {
+        "site": 24,
+        "mutation": "line 44: constant 1.0 -> 2.0",
+        "killed": true,
+        "seconds": 0.71
+      },
+      {
+        "site": 26,
+        "mutation": "line 44: Add -> Sub",
+        "killed": true,
+        "seconds": 0.69
+      },
+      {
+        "site": 27,
+        "mutation": "line 44: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.76
+      }
+    ]
+  },
+  "optimization/optimize.py": {
+    "module": "optimization/optimize.py",
+    "sites": 157,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_optimization.py"
+    ],
+    "mutants": [
+      {
+        "site": 10,
+        "mutation": "line 47: Sub -> Add",
+        "killed": true,
+        "seconds": 0.83
+      },
+      {
+        "site": 66,
+        "mutation": "line 86: Pow -> Mult",
+        "killed": true,
+        "seconds": 0.72
+      },
+      {
+        "site": 77,
+        "mutation": "line 86: constant 2.625 -> 3.625",
+        "killed": true,
+        "seconds": 0.7
+      },
+      {
+        "site": 91,
+        "mutation": "line 90: constant 2 -> 3",
+        "killed": true,
+        "seconds": 0.68
+      },
+      {
+        "site": 98,
+        "mutation": "line 91: Add -> Sub",
+        "killed": true,
+        "seconds": 0.75
+      },
+      {
+        "site": 103,
+        "mutation": "line 91: Sub -> Add",
+        "killed": true,
+        "seconds": 0.72
+      },
+      {
+        "site": 107,
+        "mutation": "line 91: constant 2 -> 3",
+        "killed": true,
+        "seconds": 0.75
+      },
+      {
+        "site": 122,
+        "mutation": "line 91: Mult -> Div",
+        "killed": true,
+        "seconds": 0.71
+      },
+      {
+        "site": 124,
+        "mutation": "line 91: Mult -> Div",
+        "killed": true,
+        "seconds": 0.71
+      },
+      {
+        "site": 130,
+        "mutation": "line 91: Mult -> Div",
+        "killed": true,
+        "seconds": 0.69
+      }
+    ]
+  },
+  "linear_model/losses.py": {
+    "module": "linear_model/losses.py",
+    "sites": 64,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_gradients.py"
+    ],
+    "mutants": [
+      {
+        "site": 2,
+        "mutation": "line 17: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.68
+      },
+      {
+        "site": 16,
+        "mutation": "line 20: Div -> Mult",
+        "killed": true,
+        "seconds": 0.62
+      },
+      {
+        "site": 25,
+        "mutation": "line 31: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.6
+      },
+      {
+        "site": 26,
+        "mutation": "line 32: Add -> Sub",
+        "killed": true,
+        "seconds": 0.56
+      },
+      {
+        "site": 31,
+        "mutation": "line 35: Sub -> Add",
+        "killed": true,
+        "seconds": 0.6
+      },
+      {
+        "site": 32,
+        "mutation": "line 37: Div -> Mult",
+        "killed": true,
+        "seconds": 0.6
+      },
+      {
+        "site": 48,
+        "mutation": "line 55: Sub -> Add",
+        "killed": true,
+        "seconds": 0.6
+      },
+      {
+        "site": 49,
+        "mutation": "line 55: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.62
+      },
+      {
+        "site": 50,
+        "mutation": "line 56: Mult -> Div",
+        "killed": true,
+        "seconds": 0.64
+      },
+      {
+        "site": 56,
+        "mutation": "line 60: constant 2 -> 3",
+        "killed": true,
+        "seconds": 0.66
+      }
+    ]
+  },
+  "linear_model/regularized.py": {
+    "module": "linear_model/regularized.py",
+    "sites": 76,
+    "tested": 10,
+    "killed": 8,
+    "score": 0.8,
+    "tests": [
+      "tests/test_linear_models.py",
+      "tests/test_sklearn_parity.py::test_ols_ridge_lasso_elasticnet"
+    ],
+    "mutants": [
+      {
+        "site": 5,
+        "mutation": "line 26: Sub -> Add",
+        "killed": true,
+        "seconds": 2.46
+      },
+      {
+        "site": 33,
+        "mutation": "line 56: constant 1 -> 2",
+        "killed": true,
+        "seconds": 2.79
+      },
+      {
+        "site": 38,
+        "mutation": "line 60: constant 0 -> 1",
+        "killed": true,
+        "seconds": 2.51
+      },
+      {
+        "site": 45,
+        "mutation": "line 69: Div -> Mult",
+        "killed": true,
+        "seconds": 2.42
+      },
+      {
+        "site": 49,
+        "mutation": "line 71: Sub -> Add",
+        "killed": true,
+        "seconds": 2.32
+      },
+      {
+        "site": 51,
+        "mutation": "line 75: Lt -> LtE",
+        "killed": false,
+        "seconds": 2.7
+      },
+      {
+        "site": 53,
+        "mutation": "line 78: Add -> Sub",
+        "killed": false,
+        "seconds": 2.73
+      },
+      {
+        "site": 61,
+        "mutation": "line 81: Add -> Sub",
+        "killed": true,
+        "seconds": 2.6
+      },
+      {
+        "site": 62,
+        "mutation": "line 81: Div -> Mult",
+        "killed": true,
+        "seconds": 2.78
+      },
+      {
+        "site": 65,
+        "mutation": "line 82: Sub -> Add",
+        "killed": true,
+        "seconds": 2.86
+      }
+    ]
+  },
+  "preprocessing/scalers.py": {
+    "module": "preprocessing/scalers.py",
+    "sites": 62,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_preprocessing_model_selection.py",
+      "tests/test_properties.py",
+      "tests/test_sklearn_parity.py::test_scalers_and_encoders_match"
+    ],
+    "mutants": [
+      {
+        "site": 2,
+        "mutation": "line 15: constant 0 -> 1",
+        "killed": true,
+        "seconds": 2.25
+      },
+      {
+        "site": 16,
+        "mutation": "line 34: constant 0 -> 1",
+        "killed": true,
+        "seconds": 3.74
+      },
+      {
+        "site": 24,
+        "mutation": "line 47: Add -> Sub",
+        "killed": true,
+        "seconds": 2.13
+      },
+      {
+        "site": 25,
+        "mutation": "line 47: Mult -> Div",
+        "killed": true,
+        "seconds": 2.35
+      },
+      {
+        "site": 26,
+        "mutation": "line 47: Div -> Mult",
+        "killed": true,
+        "seconds": 2.33
+      },
+      {
+        "site": 31,
+        "mutation": "line 54: Div -> Mult",
+        "killed": true,
+        "seconds": 2.18
+      },
+      {
+        "site": 32,
+        "mutation": "line 54: Sub -> Add",
+        "killed": true,
+        "seconds": 2.23
+      },
+      {
+        "site": 48,
+        "mutation": "line 91: Div -> Mult",
+        "killed": true,
+        "seconds": 2.32
+      },
+      {
+        "site": 54,
+        "mutation": "line 111: Eq -> NotEq",
+        "killed": true,
+        "seconds": 2.18
+      },
+      {
+        "site": 56,
+        "mutation": "line 113: Eq -> NotEq",
+        "killed": true,
+        "seconds": 2.27
+      }
+    ]
+  },
+  "preprocessing/encoders.py": {
+    "module": "preprocessing/encoders.py",
+    "sites": 22,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_preprocessing_model_selection.py",
+      "tests/test_properties.py",
+      "tests/test_sklearn_parity.py::test_scalers_and_encoders_match"
+    ],
+    "mutants": [
+      {
+        "site": 1,
+        "mutation": "line 27: constant 1 -> 2",
+        "killed": true,
+        "seconds": 2.22
+      },
+      {
+        "site": 4,
+        "mutation": "line 35: constant 1 -> 2",
+        "killed": true,
+        "seconds": 2.11
+      },
+      {
+        "site": 8,
+        "mutation": "line 78: constant 0 -> 1",
+        "killed": true,
+        "seconds": 2.16
+      },
+      {
+        "site": 12,
+        "mutation": "line 92: constant 0 -> 1",
+        "killed": true,
+        "seconds": 2.04
+      },
+      {
+        "site": 13,
+        "mutation": "line 94: Sub -> Add",
+        "killed": true,
+        "seconds": 2.15
+      },
+      {
+        "site": 14,
+        "mutation": "line 94: constant 1 -> 2",
+        "killed": true,
+        "seconds": 2.42
+      },
+      {
+        "site": 15,
+        "mutation": "line 94: constant 0 -> 1",
+        "killed": true,
+        "seconds": 2.39
+      },
+      {
+        "site": 16,
+        "mutation": "line 95: Add -> Sub",
+        "killed": true,
+        "seconds": 2.22
+      },
+      {
+        "site": 17,
+        "mutation": "line 97: Sub -> Add",
+        "killed": true,
+        "seconds": 2.11
+      },
+      {
+        "site": 21,
+        "mutation": "line 106: constant 1 -> 2",
+        "killed": true,
+        "seconds": 2.29
+      }
+    ]
+  },
+  "model_selection/split.py": {
+    "module": "model_selection/split.py",
+    "sites": 28,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_preprocessing_model_selection.py",
+      "tests/test_properties.py"
+    ],
+    "mutants": [
+      {
+        "site": 1,
+        "mutation": "line 7: constant 0 -> 1",
+        "killed": true,
+        "seconds": 0.63
+      },
+      {
+        "site": 8,
+        "mutation": "line 16: remove `not`",
+        "killed": true,
+        "seconds": 0.7
+      },
+      {
+        "site": 9,
+        "mutation": "line 16: constant 0 -> 1",
+        "killed": true,
+        "seconds": 1.48
+      },
+      {
+        "site": 12,
+        "mutation": "line 26: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.97
+      },
+      {
+        "site": 13,
+        "mutation": "line 26: Div -> Mult",
+        "killed": true,
+        "seconds": 0.71
+      },
+      {
+        "site": 15,
+        "mutation": "line 44: constant 5 -> 6",
+        "killed": true,
+        "seconds": 1.03
+      },
+      {
+        "site": 16,
+        "mutation": "line 45: Lt -> LtE",
+        "killed": true,
+        "seconds": 1.46
+      },
+      {
+        "site": 24,
+        "mutation": "line 75: constant 0 -> 1",
+        "killed": true,
+        "seconds": 0.75
+      },
+      {
+        "site": 26,
+        "mutation": "line 87: constant 0.2 -> 1.2",
+        "killed": true,
+        "seconds": 0.96
+      },
+      {
+        "site": 27,
+        "mutation": "line 93: Mult -> Div",
+        "killed": true,
+        "seconds": 0.69
+      }
+    ]
+  },
+  "decomposition/pca.py": {
+    "module": "decomposition/pca.py",
+    "sites": 36,
+    "tested": 10,
+    "killed": 9,
+    "score": 0.9,
+    "tests": [
+      "tests/test_decomposition_bayes_svm.py",
+      "tests/test_properties.py",
+      "tests/test_sklearn_parity.py::test_pca_matches"
+    ],
+    "mutants": [
+      {
+        "site": 2,
+        "mutation": "line 29: Sub -> Add",
+        "killed": true,
+        "seconds": 2.02
+      },
+      {
+        "site": 9,
+        "mutation": "line 36: Pow -> Mult",
+        "killed": true,
+        "seconds": 2.16
+      },
+      {
+        "site": 12,
+        "mutation": "line 36: constant 1 -> 2",
+        "killed": true,
+        "seconds": 2.2
+      },
+      {
+        "site": 16,
+        "mutation": "line 40: constant 1 -> 2",
+        "killed": false,
+        "seconds": 12.58
+      },
+      {
+        "site": 24,
+        "mutation": "line 48: Add -> Sub",
+        "killed": true,
+        "seconds": 2.14
+      },
+      {
+        "site": 25,
+        "mutation": "line 48: constant 1 -> 2",
+        "killed": true,
+        "seconds": 2.18
+      },
+      {
+        "site": 26,
+        "mutation": "line 54: Mult -> Div",
+        "killed": true,
+        "seconds": 3.46
+      },
+      {
+        "site": 29,
+        "mutation": "line 59: Sub -> Add",
+        "killed": true,
+        "seconds": 2.24
+      },
+      {
+        "site": 31,
+        "mutation": "line 68: Mult -> Div",
+        "killed": true,
+        "seconds": 3.19
+      },
+      {
+        "site": 34,
+        "mutation": "line 72: Sub -> Add",
+        "killed": true,
+        "seconds": 2.22
+      }
+    ]
+  },
+  "bayes/naive_bayes.py": {
+    "module": "bayes/naive_bayes.py",
+    "sites": 58,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_decomposition_bayes_svm.py",
+      "tests/test_sklearn_parity.py::test_naive_bayes_matches"
+    ],
+    "mutants": [
+      {
+        "site": 2,
+        "mutation": "line 11: constant 1 -> 2",
+        "killed": true,
+        "seconds": 2.14
+      },
+      {
+        "site": 16,
+        "mutation": "line 39: constant 0 -> 1",
+        "killed": true,
+        "seconds": 3.43
+      },
+      {
+        "site": 19,
+        "mutation": "line 48: Mult -> Div",
+        "killed": true,
+        "seconds": 3.13
+      },
+      {
+        "site": 24,
+        "mutation": "line 49: constant 0.5 -> 1.5",
+        "killed": true,
+        "seconds": 3.23
+      },
+      {
+        "site": 25,
+        "mutation": "line 49: Div -> Mult",
+        "killed": true,
+        "seconds": 3.26
+      },
+      {
+        "site": 26,
+        "mutation": "line 49: Pow -> Mult",
+        "killed": true,
+        "seconds": 2.02
+      },
+      {
+        "site": 31,
+        "mutation": "line 56: constant 1.0 -> 2.0",
+        "killed": true,
+        "seconds": 3.21
+      },
+      {
+        "site": 32,
+        "mutation": "line 61: Lt -> LtE",
+        "killed": true,
+        "seconds": 1.99
+      },
+      {
+        "site": 48,
+        "mutation": "line 87: Add -> Sub",
+        "killed": true,
+        "seconds": 1.94
+      },
+      {
+        "site": 54,
+        "mutation": "line 94: Add -> Sub",
+        "killed": true,
+        "seconds": 3.09
+      }
+    ]
+  },
+  "neural_network/layers.py": {
+    "module": "neural_network/layers.py",
+    "sites": 92,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_neural_network.py",
+      "tests/test_gradients.py"
+    ],
+    "mutants": [
+      {
+        "site": 5,
+        "mutation": "line 31: constant 2.0 -> 3.0",
+        "killed": true,
+        "seconds": 1.1
+      },
+      {
+        "site": 33,
+        "mutation": "line 86: Sub -> Add",
+        "killed": true,
+        "seconds": 1.07
+      },
+      {
+        "site": 38,
+        "mutation": "line 95: Pow -> Mult",
+        "killed": true,
+        "seconds": 1.11
+      },
+      {
+        "site": 45,
+        "mutation": "line 109: Sub -> Add",
+        "killed": true,
+        "seconds": 1.2
+      },
+      {
+        "site": 49,
+        "mutation": "line 115: remove `not`",
+        "killed": true,
+        "seconds": 0.86
+      },
+      {
+        "site": 51,
+        "mutation": "line 115: constant 1 -> 2",
+        "killed": true,
+        "seconds": 1.02
+      },
+      {
+        "site": 53,
+        "mutation": "line 121: remove `not`",
+        "killed": true,
+        "seconds": 1.02
+      },
+      {
+        "site": 61,
+        "mutation": "line 128: Mult -> Div",
+        "killed": true,
+        "seconds": 1.09
+      },
+      {
+        "site": 62,
+        "mutation": "line 136: constant 0 -> 1",
+        "killed": true,
+        "seconds": 1.22
+      },
+      {
+        "site": 65,
+        "mutation": "line 138: Sub -> Add",
+        "killed": true,
+        "seconds": 0.67
+      }
+    ]
+  },
+  "autograd/tensor.py": {
+    "module": "autograd/tensor.py",
+    "sites": 86,
+    "tested": 10,
+    "killed": 8,
+    "score": 0.8,
+    "tests": [
+      "tests/test_autograd.py"
+    ],
+    "mutants": [
+      {
+        "site": 5,
+        "mutation": "line 32: NotEq -> Eq",
+        "killed": true,
+        "seconds": 0.62
+      },
+      {
+        "site": 33,
+        "mutation": "line 121: Eq -> NotEq",
+        "killed": true,
+        "seconds": 0.61
+      },
+      {
+        "site": 38,
+        "mutation": "line 125: constant 1 -> 2",
+        "killed": false,
+        "seconds": 0.66
+      },
+      {
+        "site": 45,
+        "mutation": "line 132: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.59
+      },
+      {
+        "site": 49,
+        "mutation": "line 134: Eq -> NotEq",
+        "killed": false,
+        "seconds": 0.65
+      },
+      {
+        "site": 51,
+        "mutation": "line 135: Eq -> NotEq",
+        "killed": true,
+        "seconds": 0.7
+      },
+      {
+        "site": 53,
+        "mutation": "line 144: and <-> or",
+        "killed": true,
+        "seconds": 0.63
+      },
+      {
+        "site": 61,
+        "mutation": "line 166: Mult -> Div",
+        "killed": true,
+        "seconds": 0.66
+      },
+      {
+        "site": 62,
+        "mutation": "line 166: Gt -> GtE",
+        "killed": true,
+        "seconds": 0.63
+      },
+      {
+        "site": 65,
+        "mutation": "line 171: Sub -> Add",
+        "killed": true,
+        "seconds": 0.61
+      }
+    ]
+  },
+  "neural_network/conv.py": {
+    "module": "neural_network/conv.py",
+    "sites": 82,
+    "tested": 10,
+    "killed": 8,
+    "score": 0.8,
+    "tests": [
+      "tests/test_conv_recurrent.py"
+    ],
+    "mutants": [
+      {
+        "site": 5,
+        "mutation": "line 29: Mult -> Div",
+        "killed": true,
+        "seconds": 2.48
+      },
+      {
+        "site": 33,
+        "mutation": "line 47: constant 1 -> 2",
+        "killed": false,
+        "seconds": 2.36
+      },
+      {
+        "site": 38,
+        "mutation": "line 52: constant 0 -> 1",
+        "killed": true,
+        "seconds": 0.54
+      },
+      {
+        "site": 45,
+        "mutation": "line 56: constant 1 -> 2",
+        "killed": false,
+        "seconds": 2.5
+      },
+      {
+        "site": 49,
+        "mutation": "line 61: Mult -> Div",
+        "killed": true,
+        "seconds": 0.54
+      },
+      {
+        "site": 51,
+        "mutation": "line 61: constant 3 -> 4",
+        "killed": true,
+        "seconds": 0.57
+      },
+      {
+        "site": 53,
+        "mutation": "line 61: constant 2 -> 3",
+        "killed": true,
+        "seconds": 0.51
+      },
+      {
+        "site": 61,
+        "mutation": "line 83: constant 2 -> 3",
+        "killed": true,
+        "seconds": 0.79
+      },
+      {
+        "site": 62,
+        "mutation": "line 83: constant 4 -> 5",
+        "killed": true,
+        "seconds": 0.81
+      },
+      {
+        "site": 65,
+        "mutation": "line 83: Mult -> Div",
+        "killed": true,
+        "seconds": 0.82
+      }
+    ]
+  },
+  "neural_network/recurrent.py": {
+    "module": "neural_network/recurrent.py",
+    "sites": 72,
+    "tested": 10,
+    "killed": 9,
+    "score": 0.9,
+    "tests": [
+      "tests/test_conv_recurrent.py"
+    ],
+    "mutants": [
+      {
+        "site": 5,
+        "mutation": "line 6: constant 500 -> 501",
+        "killed": false,
+        "seconds": 2.97
+      },
+      {
+        "site": 22,
+        "mutation": "line 39: Add -> Sub",
+        "killed": true,
+        "seconds": 1.62
+      },
+      {
+        "site": 33,
+        "mutation": "line 41: Mult -> Div",
+        "killed": true,
+        "seconds": 1.66
+      },
+      {
+        "site": 38,
+        "mutation": "line 58: Sub -> Add",
+        "killed": true,
+        "seconds": 1.85
+      },
+      {
+        "site": 49,
+        "mutation": "line 61: Mult -> Div",
+        "killed": true,
+        "seconds": 1.79
+      },
+      {
+        "site": 51,
+        "mutation": "line 61: Mult -> Div",
+        "killed": true,
+        "seconds": 1.85
+      },
+      {
+        "site": 53,
+        "mutation": "line 62: Mult -> Div",
+        "killed": true,
+        "seconds": 1.71
+      },
+      {
+        "site": 61,
+        "mutation": "line 62: Sub -> Add",
+        "killed": true,
+        "seconds": 1.63
+      },
+      {
+        "site": 62,
+        "mutation": "line 62: constant 1 -> 2",
+        "killed": true,
+        "seconds": 1.55
+      },
+      {
+        "site": 65,
+        "mutation": "line 62: Mult -> Div",
+        "killed": true,
+        "seconds": 1.72
+      }
+    ]
+  },
+  "tree/hist_boosting.py": {
+    "module": "tree/hist_boosting.py",
+    "sites": 184,
+    "tested": 10,
+    "killed": 9,
+    "score": 0.9,
+    "tests": [
+      "tests/test_hist_boosting.py"
+    ],
+    "mutants": [
+      {
+        "site": 10,
+        "mutation": "line 39: constant 2.0 -> 3.0",
+        "killed": true,
+        "seconds": 0.49
+      },
+      {
+        "site": 66,
+        "mutation": "line 98: constant 1 -> 2",
+        "killed": false,
+        "seconds": 2.19
+      },
+      {
+        "site": 77,
+        "mutation": "line 111: constant 0 -> 1",
+        "killed": true,
+        "seconds": 2.23
+      },
+      {
+        "site": 91,
+        "mutation": "line 139: constant 1 -> 2",
+        "killed": true,
+        "seconds": 0.52
+      },
+      {
+        "site": 98,
+        "mutation": "line 154: constant 100 -> 101",
+        "killed": true,
+        "seconds": 2.18
+      },
+      {
+        "site": 103,
+        "mutation": "line 154: constant 255 -> 256",
+        "killed": true,
+        "seconds": 2.09
+      },
+      {
+        "site": 107,
+        "mutation": "line 174: constant 0 -> 1",
+        "killed": true,
+        "seconds": 2.31
+      },
+      {
+        "site": 122,
+        "mutation": "line 225: Eq -> NotEq",
+        "killed": true,
+        "seconds": 1.93
+      },
+      {
+        "site": 124,
+        "mutation": "line 226: constant 1 -> 2",
+        "killed": true,
+        "seconds": 1.84
+      },
+      {
+        "site": 130,
+        "mutation": "line 227: Sub -> Add",
+        "killed": true,
+        "seconds": 2.23
+      }
+    ]
+  },
+  "tree/decision_tree.py": {
+    "module": "tree/decision_tree.py",
+    "sites": 183,
+    "tested": 10,
+    "killed": 10,
+    "score": 1.0,
+    "tests": [
+      "tests/test_tree_ensembles.py",
+      "tests/test_sklearn_parity.py::test_decision_tree_structure_matches"
+    ],
+    "mutants": [
+      {
+        "site": 10,
+        "mutation": "line 35: Div -> Mult",
+        "killed": true,
+        "seconds": 1.57
+      },
+      {
+        "site": 66,
+        "mutation": "line 111: Div -> Mult",
+        "killed": true,
+        "seconds": 1.57
+      },
+      {
+        "site": 77,
+        "mutation": "line 118: constant 1 -> 2",
+        "killed": true,
+        "seconds": 1.64
+      },
+      {
+        "site": 91,
+        "mutation": "line 133: Mult -> Div",
+        "killed": true,
+        "seconds": 2.33
+      },
+      {
+        "site": 98,
+        "mutation": "line 150: Sub -> Add",
+        "killed": true,
+        "seconds": 2.46
+      },
+      {
+        "site": 103,
+        "mutation": "line 163: constant 0.0 -> 1",
+        "killed": true,
+        "seconds": 1.62
+      },
+      {
+        "site": 107,
+        "mutation": "line 172: Mult -> Div",
+        "killed": true,
+        "seconds": 2.32
+      },
+      {
+        "site": 122,
+        "mutation": "line 205: Add -> Sub",
+        "killed": true,
+        "seconds": 1.5
+      },
+      {
+        "site": 124,
+        "mutation": "line 208: constant 3 -> 4",
+        "killed": true,
+        "seconds": 2.54
+      },
+      {
+        "site": 130,
+        "mutation": "line 221: constant 1 -> 2",
+        "killed": true,
+        "seconds": 2.57
+      }
+    ]
+  }
+}
