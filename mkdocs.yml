@@ -1,0 +1,56 @@
+site_name: MLForge
+site_description: Machine learning from scratch in pure NumPy - verified by gradient checks, scikit-learn parity tests and mutation testing
+repo_url: https://github.com/your-username/mlforge
+edit_uri: edit/main/docs/
+docs_dir: docs
+site_dir: site
+theme:
+  name: material
+  features: [navigation.sections, navigation.top, content.code.copy, toc.follow]
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle: { icon: material/weather-night, name: Dark mode }
+    - scheme: slate
+      primary: indigo
+      toggle: { icon: material/weather-sunny, name: Light mode }
+markdown_extensions:
+  - admonition
+  - tables
+  - toc: { permalink: true }
+  - pymdownx.arithmatex: { generic: true }
+  - pymdownx.highlight
+  - pymdownx.superfences
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+exclude_docs: |
+  .dashboard_chunk_*.json
+  mutation_results.json
+  correctness.json
+nav:
+  - Home: index.md
+  - Evidence:
+      - Correctness dashboard: correctness.md
+      - Benchmarks: benchmarks.md
+      - Mutation survivors: mutation_survivors.md
+      - Verifying ML code (essay): verifying-ml-from-scratch.md
+  - Algorithms:
+      - Optimization: algorithms/optimization.md
+      - Linear regression: algorithms/linear_regression.md
+      - Regularisation: algorithms/regularization.md
+      - Logistic regression: algorithms/logistic_regression.md
+      - Decision trees: algorithms/decision_trees.md
+      - Ensembles & boosting: algorithms/ensembles.md
+      - k-nearest neighbours: algorithms/knn.md
+      - Naive Bayes: algorithms/naive_bayes.md
+      - Clustering: algorithms/kmeans.md
+      - PCA: algorithms/pca.md
+      - SVM: algorithms/svm.md
+      - Neural networks: algorithms/neural_networks.md
+      - Autograd: algorithms/autograd.md
+      - Metrics: algorithms/metrics.md
+      - Model selection: algorithms/model_selection.md
+  - Reference:
+      - API reference: api.md
+      - Releasing: RELEASING.md
