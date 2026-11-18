@@ -1,0 +1,12 @@
+-r requirements.txt
+# plotting, tests, benchmarks (scikit-learn is used ONLY for benchmarking / parity tests / loading toy datasets)
+matplotlib>=3.5
+scikit-learn>=1.2
+scipy
+pytest>=7.0
+pytest-cov
+ruff
+build
+nbformat
+nbclient
+ipykernel

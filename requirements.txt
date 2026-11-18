@@ -1,0 +1,2 @@
+# Runtime dependency of the library itself: NumPy only.
+numpy>=1.23
