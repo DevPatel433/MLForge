@@ -1,0 +1,91 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlforge-numpy"          # PyPI distribution name - see docs/RELEASING.md before publishing
+version = "0.3.0"
+description = "Machine learning from scratch: classical algorithms in pure NumPy, verified by gradient checks and scikit-learn parity tests"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "MLForge Contributors" }]
+keywords = ["machine learning", "numpy", "from scratch", "education", "autograd", "neural network", "svm", "random forest"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Education",
+]
+dependencies = ["numpy>=1.23"]
+
+[project.optional-dependencies]
+viz = ["matplotlib>=3.5"]
+docs = ["mkdocs>=1.6,<2", "mkdocs-material", "pymdown-extensions"]
+bench = ["matplotlib>=3.5", "scikit-learn>=1.2"]
+notebooks = ["matplotlib>=3.5", "scikit-learn>=1.2", "nbformat", "nbclient", "ipykernel"]
+dev = [
+    "pytest>=7.0", "pytest-cov", "ruff", "build", "hypothesis", "mkdocs>=1.6,<2", "mkdocs-material", "pymdown-extensions",
+    "matplotlib>=3.5", "scikit-learn>=1.2", "scipy",
+    "nbformat", "nbclient", "ipykernel",
+]
+
+[project.scripts]
+mlforge = "mlforge.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/your-username/mlforge"
+Documentation = "https://github.com/your-username/mlforge/tree/main/docs"
+Repository = "https://github.com/your-username/mlforge"
+Changelog = "https://github.com/your-username/mlforge/blob/main/CHANGELOG.md"
+Issues = "https://github.com/your-username/mlforge/issues"
+
+[tool.setuptools.packages.find]
+include = ["mlforge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.coverage.run]
+source = ["mlforge"]
+omit = ["mlforge/__main__.py"]
+
+[tool.coverage.report]
+fail_under = 95
+show_missing = true
+skip_covered = true
+exclude_lines = ["pragma: no cover", "raise NotImplementedError", "if __name__ == .__main__.:"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py39"
+extend-exclude = ["notebooks/*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+ignore = [
+    "E741",   # ambiguous variable names (l, I, O) are conventional in maths code
+    "E731",   # lambdas assigned to names are used deliberately in tests / examples
+    "B023",   # closures over loop variables are evaluated immediately in this codebase
+    "B905",   # zip() strictness not available on py3.9
+    "E702", "E701",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]             # re-exports
+"tests/*" = ["E501", "E402", "B015", "B017", "B018"]   # E402: pytest.importorskip() before imports
+"examples/*" = ["E402", "E501"]
+"tools/*" = ["E501"]
+"scripts/*" = ["E501"]
+"notebooks/*" = ["E501", "E402"]
+"mlforge/benchmarking.py" = ["E501"]
