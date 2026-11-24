@@ -47,3 +47,14 @@ JOSS typically expects a public history and users; see `RELEASING.md`. Acceptanc
 | Mutation testing | RMSProp's update formula, optimizer defaults, ReLU's negative-input gradient, silhouette singletons, ... untested |
 | Renamed-copy test | the rename script left `mlforge_*` data keys half-renamed |
 | Reading outputs | a notebook claimed gradient descent matched the closed form while not converged; several README figures were mis-stated and corrected |
+
+## 4. Honest caveats
+
+* **A sandbox reset mid-session destroyed all uncommitted work** (everything after the v0.2.0 zip). It was rebuilt from that zip and the code in the conversation; checkpoints were then written to the outputs folder. Nothing was lost in the final deliverable, but the first mutation-testing round had to be repeated.
+* **Never executed:** the GitHub Actions workflows, Python 3.9-3.11 and macOS / Windows runs (tests ran on Python 3.12 / NumPy 2.x only), the Pages deployment, and the rendered math in the docs site (HTML structure was checked, not viewed in a browser).
+* Mutation scores are *sampled* (10 random mutants per module, fixed seed) estimates, not exhaustive.
+* Speed: single-threaded NumPy; the benchmark shows 1.5-14x gaps for trees / boosting / SVC and ~100x for Python-loop first-order solvers.
+* `your-username` placeholders remain until you run `scripts/set_repo_url.py`; `paper.md` author fields are TODOs.
+
+## 5. Where to go next
+Publish (RELEASING.md), let CI go green, release v0.3.0 publicly, then collect users and issues before a JOSS submission; later: attention / transformer layers with gradient checks, CIFAR-10 on faster hardware, sparse support, `sample_weight`.
